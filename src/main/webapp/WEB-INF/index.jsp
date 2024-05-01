@@ -9,34 +9,35 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!--Div donde se genera registro-->
 	<div>
 		<h1>Registro:</h1>
-		<form:form>
-			<form:label>Nombre:</form:label>
-			<form:input type="text" />
+		<form:form action="/login" method="POST" modelAttribute="registerUser">
+			<form:label path="nombre">Nombre:</form:label>
+			<form:input type="text" path="nombre"/>
 
-			<form:label>Apellido:</form:label>
-			<form:input type="text" />
+			<form:label path="apellido">Apellido:</form:label>
+			<form:input type="text" path="apellido"/>
 
-			<form:label>Email:</form:label>
-			<form:input type="text" />
+			<form:label path="email">Email:</form:label>
+			<form:input path="email" type="text" />
 
-			<form:label>Password:</form:label>
-			<form:input type="password" />
+			<form:label path="password">Password:</form:label>
+			<form:input path="password" type="password" />
 
-			<form:label>Confirmar password:</form:label>
-			<form:input type="password" />
+			<form:label path="passwordconfirmar">Confirmar password:</form:label>
+			<form:input path="passwordconfirmar" type="password" />
 		</form:form>
 	</div>
-
+	<!--Div donde se genera el login-->
 	<div>
 		<h1>Login</h1>
-		<form:form>
-			<form:label>Email:</form:label>
-			<form:input type="text" />
+		<form:form action="/login" method="POST" modelAttribute="loginUser">
+			<form:label path="emailLogin">Email:</form:label>
+			<form:input path="emailLogin" type="text" />
 
-			<form:label>Password:</form:label>
-			<form:input type="password" />
+			<form:label path="passwordLogin">Password:</form:label>
+			<form:input  path="passwordLogin" type="password" />
 		</form:form>
 	</div>
 </body>
