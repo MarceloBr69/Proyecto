@@ -26,8 +26,8 @@
 			<form:label path="password">Password:</form:label>
 			<form:input path="password" type="password" />
 
-			<form:label path="passwordconfirmar">Confirmar password:</form:label>
-			<form:input path="passwordconfirmar" type="password" />
+			<form:label path="passwordConfirmar">Confirmar password:</form:label>
+			<form:input path="passwordConfirmar" type="password" />
 		</form:form>
 	</div>
 	<!--Div donde se genera el login-->
