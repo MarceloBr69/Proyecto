@@ -10,6 +10,7 @@
 </head>
 <body>
 	<!--Div donde se genera registro-->
+	<h1>Bienvenidos a</h1>
 	<div>
 		<h1>Registro:</h1>
 		<form:form action="/login" method="POST" modelAttribute="registerUser">
