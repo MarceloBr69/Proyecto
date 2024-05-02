@@ -18,7 +18,7 @@
 			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Logout</a></li>
 		</ul>
 	</nav>
-	<div>
+	<div class="map">
 		<!--Imagen de fondo, un mapa-->
 		<!--Boton de crear post-->
 		<form action="crear/post" method="POST">
