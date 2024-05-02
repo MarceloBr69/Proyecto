@@ -20,7 +20,7 @@
 		</p>	
 		<br>
 		<p>
-			Este es un proyecto realizado por 4 estudiantes de Coding Dojo, donde sera presentado como proyecto final para la titulacion del mismo. En un futuro nos gustaria presentar
+			Donde sera presentado como proyecto final para la titulacion del mismo. En un futuro nos gustaria presentar
 			este proyecto a diversas municipalidades del Bio Bio, para permitir una mejor conexion con todos los vecinos de las comunas. 
 		</p>
 	</div>
