@@ -19,6 +19,7 @@
 		</ul>
 	</nav>
 	<div>
+		<!--Imagen de fondo, un mapa-->
 		<!--Boton de crear post-->
 		<form action="crear/post" method="POST">
 			<button>Crear post</button>
