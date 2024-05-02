@@ -9,6 +9,16 @@
 <title>Login</title>
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href='#registo'>Registro</a></li>
+			<li><a href='#login'>Login</a></li>
+		</ul>
+	</nav>
+
+
+
+
 	<!--Div donde se muestra informacion de la aplicacion-->
 	<div class="divProyecto">
 		<h1>Proyecto</h1>
@@ -34,14 +44,18 @@
 
 
 	<!--Div de formulario registro-->
-	<div class="registo">
+	<div id="registo">
 		<h2>Registro:</h2>
 		<form:form action="/login" method="POST" modelAttribute="registerUser">
-			<form:label path="nombre">Nombre:</form:label>
+			<!--Nombres-->
+			<form:label path="nombre">Nombres:</form:label>
 			<form:input type="text" path="nombre"/>
-
-			<form:label path="apellido">Apellido:</form:label>
+			<!--Apellido-->
+			<form:label path="apellido">Apellidos:</form:label>
 			<form:input type="text" path="apellido"/>
+			<!--Rut-->
+			<form:label path="rut">Rut:</form:label>
+			<form:input type="text" path="rut"/>
 
 			<form:label path="email">Email:</form:label>
 			<form:input path="email" type="text" />
@@ -62,7 +76,7 @@
 		</form:form>
 	</div>
 	<!--Div de formulario Login-->
-	<div class="login">
+	<div id="login">
 		<h2>Login</h2>
 		<form:form action="/login" method="POST" modelAttribute="loginUser">
 			<!--Email-->
