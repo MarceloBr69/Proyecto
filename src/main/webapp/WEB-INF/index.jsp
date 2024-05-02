@@ -9,6 +9,7 @@
 <title>Login</title>
 </head>
 <body>
+	<!--Barra de navegacion-->
 	<nav>
 		<ul>
 			<li><a href='#registo'>Registro</a></li>
