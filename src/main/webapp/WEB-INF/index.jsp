@@ -74,6 +74,8 @@
 				<form:option value="2">Municiaplidad de Lota</form:option>
 				<form:option value="3">Municiaplidad de Hualpén</form:option>
 			</form:select>
+			
+			<button>Registrar</button>
 		</form:form>
 	</div>
 	<!--Div de formulario Login-->
@@ -86,6 +88,8 @@
 			<!--Password-->
 			<form:label path="passwordLogin">Password:</form:label>
 			<form:input  path="passwordLogin" type="password" />
+
+			<button>Login</button>
 		</form:form>
 	</div>
 </body>
