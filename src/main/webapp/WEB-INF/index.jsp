@@ -10,10 +10,13 @@
 </head>
 <body>
 	<!--Div donde se muestra informacion de la aplicacion-->
-	<h1>Bienvenidos a</h1>
+	<div class="divProyecto">
+		<h1>Proyecto</h1>
+	</div>
+
+
 	<div class="informacion">
-		<h3>Presentacion</h3>
-		<p>Bienvenido a este proyecto informatico. En este buscamos ayudar a las comunidades del gran concepcion a mantenerse 
+		<p> Bienvenido a este proyecto informatico. En este buscamos ayudar a las comunidades del gran concepcion a mantenerse 
 			comunicadas e informadas junto a sus respectivas
 			comunas y/o municipalidades. En esta aplicacion podras encontrar funciones como: publicar post, para advertir y/o dar a conocer problematicas de la comuna,
 			ver publicaciones y anuncios de las municipalidades, publicitar negocios particulares, entre otras cosas.
@@ -24,8 +27,14 @@
 			este proyecto a diversas municipalidades del Bio Bio, para permitir una mejor conexion con todos los vecinos de las comunas. 
 		</p>
 	</div>
+
+	<!--Aca colocar logo-->
+
+
+
+
 	<!--Div de formulario registro-->
-	<div>
+	<div class="registo">
 		<h2>Registro:</h2>
 		<form:form action="/login" method="POST" modelAttribute="registerUser">
 			<form:label path="nombre">Nombre:</form:label>
@@ -53,7 +62,7 @@
 		</form:form>
 	</div>
 	<!--Div de formulario Login-->
-	<div>
+	<div class="login">
 		<h2>Login</h2>
 		<form:form action="/login" method="POST" modelAttribute="loginUser">
 			<!--Email-->
