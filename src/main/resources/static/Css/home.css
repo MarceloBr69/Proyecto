@@ -23,7 +23,7 @@ a{
 .image{
     width: 75%;
     height: 47em;
-    background-image: url(mapa2.png);
+    background-image: url(/src/main/resources/static/fotos/mapa2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
