@@ -21,9 +21,9 @@
 	<div class="container">
 		<!--Boton de crear post-->
         <div class="image">
-            <form action="crear/post" method="POST">
+            <form:form action="crear/post" method="POST">
                 <button>Crear post</button>
-            </form>
+            </form:form>
         </div>
 	</div>
 </body>
