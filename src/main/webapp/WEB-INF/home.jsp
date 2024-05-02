@@ -18,12 +18,13 @@
 			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Logout</a></li>
 		</ul>
 	</nav>
-	<div class="map">
-		<!--Imagen de fondo, un mapa-->
+	<div class="container">
 		<!--Boton de crear post-->
-		<form action="crear/post" method="POST">
-			<button>Crear post</button>
-		</form>
+        <div class="image">
+            <form action="crear/post" method="POST">
+                <button>Crear post</button>
+            </form>
+        </div>
 	</div>
 </body>
 </html>
