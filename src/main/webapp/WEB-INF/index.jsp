@@ -14,7 +14,7 @@
 		<h1>Proyecto</h1>
 	</div>
 
-
+	<!--Div donde se muestra la informacion-->
 	<div class="informacion">
 		<p> Bienvenido a este proyecto informatico. En este buscamos ayudar a las comunidades del gran concepcion a mantenerse 
 			comunicadas e informadas junto a sus respectivas
