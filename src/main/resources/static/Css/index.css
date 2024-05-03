@@ -1,0 +1,96 @@
+body{
+    background-color: #ffffec;
+}
+
+/*estilos barra de navegacion*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2e9f87;
+
+}
+
+.contenedorNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 30px;
+    gap: 75em;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+/*imagen con titulo de Proyecto*/
+
+.divProyecto{
+    display: flex;
+    flex-direction: row;
+    background-image: url("/imagenes/tituloproyecto.png");
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffffec;
+    height: 250px;
+    width: 90%;
+}
+
+/* descripción general de la aplicación, informaciones*/
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    margin: 0px auto;
+    color: #2e9f87;
+}
+
+/* contenedor de ambos formularios*/
+
+.formulario{
+    display: flex;
+    padding: 20px;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*formulario de registro*/
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    background-color:#69c16f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*formulario de login*/
+
+.login{
+    display: flex;
+    flex-direction: column;
+    background-color: #d6ec8b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*estilos forms en general */
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border-radius: 5px;
+}
+
+

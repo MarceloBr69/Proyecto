@@ -42,10 +42,11 @@
 	<!--Aca colocar logo-->
 
 
-
-
-	<!--Div de formulario registro-->
-	<div id="registo">
+<!--Div contenedor de formularios-->
+	<div class="formulario">
+	
+		<!--Div de formulario registro-->
+	<div id="registro">
 		<h2>Registro:</h2>
 		<form:form action="/login" method="POST" modelAttribute="registerUser">
 			<!--Nombres-->
@@ -68,11 +69,11 @@
 			<form:input path="passwordConfirmar" type="password" />
 
 			<!--Seleccion de municipalidad-->
-			<form:label path="municiaplidad">Selecciona tu municipalidad</form:label>
-			<form:select path="municiaplidad">
-				<form:option value="1">Municiaplidad de Concepción</form:option>
-				<form:option value="2">Municiaplidad de Lota</form:option>
-				<form:option value="3">Municiaplidad de Hualpén</form:option>
+			<form:label path="municipalidad">Selecciona tu municipalidad</form:label>
+			<form:select path="municipalidad">
+				<form:option value="1">Municipalidad de Concepción</form:option>
+				<form:option value="2">Municipalidad de Lota</form:option>
+				<form:option value="3">Municipalidad de Hualpén</form:option>
 			</form:select>
 
 			<button>Registrar</button>
@@ -92,6 +93,9 @@
 			<button>Login</button>
 		</form:form>
 	</div>
+	
+	</div>
+	
 	<footer>
 		<button>Donanos!</button>
 	</footer>
