@@ -32,7 +32,6 @@ ul{
 .divProyecto{
     display: flex;
     flex-direction: row;
-    background-image: url("/imagenes/tituloproyecto.png");
     margin: 50px auto;
     justify-content: center;
     align-items: center;

@@ -5,14 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Proyecto</title>
+	<meta lang="es">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/index.css">
+	<title>Proyecto</title>
 </head>
 <body>
 	<!--Barra de navegacion-->
 	<nav>
 		<ul>
-			<li><a href='#registo'>Registro</a></li>
+			<li><a href='#registro'>Registro</a></li>
 			<li><a href='#login'>Login</a></li>
 		</ul>
 	</nav>
@@ -48,7 +51,7 @@
 		<!--Div de formulario registro-->
 	<div id="registro">
 		<h2>Registro:</h2>
-		<form:form action="/login" method="POST" modelAttribute="registerUser">
+		<form:form action="/register" method="POST" modelAttribute="registerUser">
 			<!--Nombres-->
 			<form:label path="nombre">Nombres:</form:label>
 			<form:input type="text" path="nombre"/>
@@ -71,9 +74,9 @@
 			<!--Seleccion de municipalidad-->
 			<form:label path="municipalidad">Selecciona tu municipalidad</form:label>
 			<form:select path="municipalidad">
-				<form:option value="1">Municipalidad de ConcepciÃ³n</form:option>
+				<form:option value="1">Municipalidad de Concepción</form:option>
 				<form:option value="2">Municipalidad de Lota</form:option>
-				<form:option value="3">Municipalidad de HualpÃ©n</form:option>
+				<form:option value="3">Municipalidad de Hualpén</form:option>
 			</form:select>
 
 			<button>Registrar</button>

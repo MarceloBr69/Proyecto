@@ -30,19 +30,19 @@ public class Usuario {
 	private String rut;
 	
 	@Size(min=2, message="Por favor, proporciona tu correo")
-	private String correo;
+	private String email;
 	
-	private String contraseña;
+	private String password;
 	
 	@Transient
-	private String confirmacionContraseña;
+	private String passwordConfirmar;
 	
 	private String municipalidad;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-ss")
 	private Date fechaCreacion;
-	
+
 	public long getId() {
 		return id;
 	}
@@ -75,28 +75,28 @@ public class Usuario {
 		this.rut = rut;
 	}
 
-	public String getCorreo() {
-		return correo;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getConfirmacionContraseña() {
-		return confirmacionContraseña;
+	public String getPasswordConfirmar() {
+		return passwordConfirmar;
 	}
 
-	public void setConfirmacionContraseña(String confirmacionContraseña) {
-		this.confirmacionContraseña = confirmacionContraseña;
+	public void setPasswordConfirmar(String passwordConfirmar) {
+		this.passwordConfirmar = passwordConfirmar;
 	}
 
 	public String getMunicipalidad() {
@@ -114,6 +114,6 @@ public class Usuario {
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
-
+	
 
 }

@@ -35,7 +35,7 @@ a{/*Etiqueta <a></a>*/
 .image{ /*Contenedor con la clase imagen, donde posee un background-image*/
     width: 50%;
     height: 47em;
-    background-image: url(/src/main/resources/static/fotos/mapa1.png); 
+    background-image: url(../fotos/mapa1.png); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -5,8 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Proyecto</title>
+	<meta lang="es">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/home.css">
+	<title>Proyecto</title>
 </head>
 <body>
 	<nav>
@@ -28,7 +31,7 @@
         <div class="image"><!--Aca se pone la foto como background-->
             <div>
                 <form:form action="/buscar">
-                    <form:input type="text" placeholder="Buscar...">
+                    <form:input path="buscar" type="text" placeholder="Buscar..."></form:input>
                 </form:form>
             </div>
         </div>
