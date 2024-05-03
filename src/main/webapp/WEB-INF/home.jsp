@@ -10,20 +10,27 @@
 </head>
 <body>
 	<nav>
-		<ul><!--Direcciones no fijas-->
-			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
-			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
-			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Crear</a></li>
-			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Perfil</a></li>
-			<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Logout</a></li>
-		</ul>
+		<div class="name-logo">
+            <!--Logo img-->
+            <h3>Menu</h3>
+        </div>
+        <div>
+            <ul><!--Direcciones no fijas-->
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Crear</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Perfil</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Logout</a></li>
+            </ul>
+        </div>
 	</nav>
 	<div class="container">
-		<!--Boton de crear post-->
-        <div class="image">
-            <form:form path="crear" action="crear/post" method="POST">
-                <button>Crear post</button>
-            </form:form>
+        <div class="image"><!--Aca se pone la foto como background-->
+            <div>
+                <form:form action="/buscar">
+                    <form:input type="text" placeholder="Buscar...">
+                </form:form>
+            </div>
         </div>
 	</div>
 </body>
