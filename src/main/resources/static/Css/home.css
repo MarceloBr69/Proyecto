@@ -2,6 +2,9 @@ body{
     /*background-color: #ffffec;*/
     background: linear-gradient(#2e9f87, #d6ec8b);
 }
+h3{
+    color: white;
+}
 nav{/*Contenedor nav*/
     width: 100%;
     height: 2em;
