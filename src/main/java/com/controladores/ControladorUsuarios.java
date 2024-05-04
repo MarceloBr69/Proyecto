@@ -31,6 +31,7 @@ public class ControladorUsuarios {
 		
 		resultado = this.servicioUsuario.validarRegistro(resultado, nuevoUsuario);
 		if(resultado.hasErrors()) {
+			System.out.println("registro fallido");
 			return "index.jsp";
 		}
 		
@@ -38,25 +39,26 @@ public class ControladorUsuarios {
 		
 		sesion.setAttribute("idUsuario", nuevoUsuario.getId());
 		sesion.setAttribute("nombre", nuevoUsuario.getNombre());
-		
-		return "redirect:/home.jsp";
+		System.out.println("registro existoso");
+		return "redirect:/home";
 	}
 	
 	@PostMapping("/login")
-	public String procesaLogin(@Valid @ModelAttribute("loginUsuario") LoginUsuario loginUsuario, BindingResult resultado, HttpSession sesion,
+	public String procesaLogin(@Valid @ModelAttribute("loginUsuario") LoginUsuario loginUser, BindingResult resultado, HttpSession sesion,
 									  @ModelAttribute("registerUsuario") Usuario nuevoUsuario) {
-		resultado = this.servicioUsuario.validarLogin(resultado, loginUsuario);
+		resultado = this.servicioUsuario.validarLogin(resultado, loginUser);
 		if(resultado.hasErrors()) {
+			System.out.println("login fallido, error en credenciales");
 			return "redirect:/";
 		}
 		
-		Usuario usuarioExistente = this.servicioUsuario.selectPorCorreo(loginUsuario.getEmailLogin());
+		Usuario usuarioExistente = this.servicioUsuario.selectPorCorreo(loginUser.getEmailLogin());
 		
 		sesion.setAttribute("idUsuario", usuarioExistente.getId());
 		sesion.setAttribute("nombre", usuarioExistente.getNombre());
 		
-		
-		return "redirect:/home.jsp";
+		System.out.println("login existoso");
+		return "redirect:/home";
 	}
 	
 	@GetMapping("/logout")
@@ -64,6 +66,7 @@ public class ControladorUsuarios {
 		sesion.invalidate();
 		return "redirect:/";
 	}
+	
 	
 
 }
