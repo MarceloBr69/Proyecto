@@ -13,50 +13,51 @@ import com.repositorios.RepositorioUsuarios;
 public class ServicioUsuarios {
 	
 	@Autowired
-	private RepositorioUsuarios repositorioUsuarios;
+	private RepositorioUsuarios repositorioUsuario;
 	
-	//Comprueba que las contraseñas coincidan y que el correo no esté en uso
 	public BindingResult validarRegistro(BindingResult resultado, Usuario nuevoUsuario) {
-		if(! nuevoUsuario.getPassword().equals(nuevoUsuario.getPasswordConfirmar())) {
-			resultado.rejectValue("confirmacionContraseña", "Matches", "Las contraseñas no coinciden");
+		if(! nuevoUsuario.getContraseña().equals(nuevoUsuario.getConfirmarContraseña())) {
+			resultado.rejectValue("confirmarContraseña", "Matches", "Las contraseñas no coinciden");
 		}
-		Usuario usuarioExistente = this.repositorioUsuarios.getByEmail(nuevoUsuario.getEmail());
+		Usuario usuarioExistente = this.repositorioUsuario.getByCorreo(nuevoUsuario.getCorreo());
 		if(usuarioExistente != null) {
-			resultado.rejectValue("email", "Unique", "Este correo ya está en uso");
+			resultado.rejectValue("correo", "Unique", "Este correo ya está registrado");
 		}
-		
 		return resultado;
 	}
 	
-	//Crea un nuevo usuario
-	public Usuario insertarUsuario(Usuario nuevoUsuario) {
-		String contraseñaEncriptada = BCrypt.hashpw(nuevoUsuario.getPassword(), BCrypt.gensalt());
-		nuevoUsuario.setPassword(contraseñaEncriptada);
-		return this.repositorioUsuarios.save(nuevoUsuario);
-	}
-	
-	//Valida el login, comparando con lo que existe en la base de datos
 	public BindingResult validarLogin(BindingResult resultado, LoginUsuario loginUsuario) {
-		Usuario usuarioExistente = this.repositorioUsuarios.getByEmail(loginUsuario.getEmailLogin());
+		Usuario usuarioExistente = this.repositorioUsuario.getByCorreo(loginUsuario.getCorreoLogin());
 		if(usuarioExistente == null) {
-			resultado.rejectValue("emailLogin", "Matches", "Credenciales incorrectas");
+			resultado.rejectValue("correoLogin", "Matches", "Credenciales incorrectas");
 			return resultado;
 		}
 		
-	
-		if(! BCrypt.checkpw(loginUsuario.getPasswordLogin(), usuarioExistente.getPassword())) {
-			resultado.rejectValue("emailLogin", "Matches", "Credenciales incorrectas");
-
+		if(! BCrypt.checkpw(loginUsuario.getContraseñaLogin(), usuarioExistente.getContraseña())) {
+			resultado.rejectValue("correoLogin", "Matches", "Credenciales incorrectas");
 		}
+		
 		return resultado;
 	}
 	
-	public Usuario selectPorCorreo(String email) {
-		return this.repositorioUsuarios.getByEmail(email);
-		
+	public Usuario registrarUsuario(Usuario nuevoUsuario) {
+		String contraseñaEncriptada = BCrypt.hashpw(nuevoUsuario.getContraseña(), BCrypt.gensalt());
+		nuevoUsuario.setContraseña(contraseñaEncriptada);
+		return this.repositorioUsuario.save(nuevoUsuario);
 	}
 	
-	public Usuario selectPorId(Long id) {
-		return this.repositorioUsuarios.getById(id);
+	public Usuario selectPorCorreo(String correo) {
+		return this.repositorioUsuario.getByCorreo(correo);
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+

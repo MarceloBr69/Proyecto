@@ -3,29 +3,31 @@ package com.modelos;
 import jakarta.validation.constraints.Size;
 
 public class LoginUsuario {
-
 	
-	@Size(min=1, message="Por favor, proporciona tu correo")
-	private String emailLogin;
+	@Size(min=2, message="Proporciona tu correo")
+	private String correoLogin;
 	
-	@Size(min=1, message="Por favor, proporciona tu correo")
-	private String passwordLogin;
+	@Size(min=2, message="Proporciona tu contraseña")
+	private String contraseñaLogin;
 	
-	public String getEmailLogin() {
-		return emailLogin;
-	}
-
-	public void setEmailLogin(String emailLogin) {
-		this.emailLogin = emailLogin;
-	}
-
-	public String getPasswordLogin() {
-		return passwordLogin;
-	}
-
-	public void setPasswordLogin(String passwordLogin) {
-		this.passwordLogin = passwordLogin;
-	}
-
 	public LoginUsuario() {}
+
+	public String getCorreoLogin() {
+		return correoLogin;
+	}
+
+	public void setCorreoLogin(String correoLogin) {
+		this.correoLogin = correoLogin;
+	}
+
+	public String getContraseñaLogin() {
+		return contraseñaLogin;
+	}
+
+	public void setContraseñaLogin(String contraseñaLogin) {
+		this.contraseñaLogin = contraseñaLogin;
+	}
+
+
+	
 }

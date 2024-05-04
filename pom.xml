@@ -63,9 +63,9 @@
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>jakarta.servlet.jsp.jstl</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-            <scope>provided</scope>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
         </dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>

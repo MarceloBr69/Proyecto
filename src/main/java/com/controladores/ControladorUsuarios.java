@@ -21,52 +21,55 @@ public class ControladorUsuarios {
 	private ServicioUsuarios servicioUsuario;
 	
 	@GetMapping("/")
-	public String mostrarInicio(@ModelAttribute("registerUser") Usuario usuario,
-								@ModelAttribute("loginUser") LoginUsuario loginUser) {
+	public String mostrarInicio(@ModelAttribute("usuario") Usuario usuario,
+								@ModelAttribute("loginUsuario") LoginUsuario loginUsuario) {
 		return "index.jsp";
 	}
 	
-	@PostMapping("/register")
-	public String procesaRegistro(@Valid @ModelAttribute("registerUser") Usuario nuevoUsuario, BindingResult resultado, HttpSession sesion) {
-		
+	@PostMapping("/registro")
+	public String registrarUsuario(@Valid @ModelAttribute("usuario") Usuario nuevoUsuario,
+									BindingResult resultado,
+									@ModelAttribute("loginUsuario") LoginUsuario loginUsuario,
+									HttpSession sesion) {
 		resultado = this.servicioUsuario.validarRegistro(resultado, nuevoUsuario);
 		if(resultado.hasErrors()) {
-			System.out.println("registro fallido");
 			return "index.jsp";
 		}
-		
-		nuevoUsuario = this.servicioUsuario.insertarUsuario(nuevoUsuario);
+		nuevoUsuario = this.servicioUsuario.registrarUsuario(nuevoUsuario);
 		
 		sesion.setAttribute("idUsuario", nuevoUsuario.getId());
 		sesion.setAttribute("nombre", nuevoUsuario.getNombre());
-		System.out.println("registro existoso");
+		sesion.setAttribute("apellidos", nuevoUsuario.getApellidos());
+		
 		return "redirect:/home";
 	}
 	
 	@PostMapping("/login")
-	public String procesaLogin(@Valid @ModelAttribute("loginUsuario") LoginUsuario loginUser, BindingResult resultado, HttpSession sesion,
-									  @ModelAttribute("registerUsuario") Usuario nuevoUsuario) {
-		resultado = this.servicioUsuario.validarLogin(resultado, loginUser);
+	public String iniciarSesion(@Valid @ModelAttribute("loginUsuario") LoginUsuario loginUsuario,
+								BindingResult resultado,
+								@ModelAttribute("usuario") Usuario usuario,
+								HttpSession sesion) {
+		resultado = this.servicioUsuario.validarLogin(resultado, loginUsuario);
 		if(resultado.hasErrors()) {
-			System.out.println("login fallido, error en credenciales");
-			return "redirect:/";
+			System.out.println("Error");
+			return "index.jsp";
 		}
-		
-		Usuario usuarioExistente = this.servicioUsuario.selectPorCorreo(loginUser.getEmailLogin());
+		Usuario usuarioExistente = this.servicioUsuario.selectPorCorreo(loginUsuario.getCorreoLogin());
 		
 		sesion.setAttribute("idUsuario", usuarioExistente.getId());
 		sesion.setAttribute("nombre", usuarioExistente.getNombre());
+		sesion.setAttribute("apellidos", usuarioExistente.getApellidos());
 		
-		System.out.println("login existoso");
 		return "redirect:/home";
 	}
 	
-	@GetMapping("/logout")
-	public String procesaLogout(HttpSession sesion) {
-		sesion.invalidate();
-		return "redirect:/";
-	}
-	
-	
-
 }
+
+
+
+
+
+
+
+
+

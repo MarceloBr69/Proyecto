@@ -1,6 +1,6 @@
 package com.modelos;
 
-import java.sql.Date;
+import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Size;
@@ -16,32 +18,49 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table(name="usuarios")
 public class Usuario {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
-	@Size(min=2, message="Por favor, proporciona tu nombre")
+	@Size(min=2, message="Proporciona tu nombre")
 	private String nombre;
 	
-	@Size(min=2, message="Por favor, proporciona tu apellido")
-	private String apellido;
+	@Size(min=2, message="Proporciona ambos apellidos")
+	private String apellidos;
 	
-	@Size(min=2, message="Por favor, proporciona tu RUT")
+	@Size(min=7, message="Proporciona tu RUT")
 	private String rut;
 	
-	@Size(min=2, message="Por favor, proporciona tu correo")
-	private String email;
+	@Size(min=2, message="Proporciona tu correo")
+	private String correo;
 	
-	private String password;
-	
+	private String contraseña;
+
 	@Transient
-	private String passwordConfirmar;
+	private String confirmarContraseña;
 	
-	private String municipalidad;
+	private Long municipalidadId;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-ss")
 	private Date fechaCreacion;
+	
+	@DateTimeFormat(pattern="yyyy-MM-ss")
+	private Date fechaActualizacion;
+	
+	@PrePersist
+	protected void onCreate() {
+		this.fechaCreacion = new Date();
+	}
+	
+	@PreUpdate
+	protected void onUpdate() {
+		this.fechaActualizacion = new Date();
+	}
+
+	public Usuario() {}
+
 
 	public long getId() {
 		return id;
@@ -59,12 +78,12 @@ public class Usuario {
 		this.nombre = nombre;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public String getApellidos() {
+		return apellidos;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
 	}
 
 	public String getRut() {
@@ -75,36 +94,36 @@ public class Usuario {
 		this.rut = rut;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getCorreo() {
+		return correo;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getContraseña() {
+		return contraseña;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 
-	public String getPasswordConfirmar() {
-		return passwordConfirmar;
+	public String getConfirmarContraseña() {
+		return confirmarContraseña;
 	}
 
-	public void setPasswordConfirmar(String passwordConfirmar) {
-		this.passwordConfirmar = passwordConfirmar;
+	public void setConfirmarContraseña(String confirmarContraseña) {
+		this.confirmarContraseña = confirmarContraseña;
 	}
 
-	public String getMunicipalidad() {
-		return municipalidad;
+	public Long getMunicipalidadId() {
+		return municipalidadId;
 	}
 
-	public void setMunicipalidad(String municipalidad) {
-		this.municipalidad = municipalidad;
+	public void setMunicipalidadId(Long municipalidadId) {
+		this.municipalidadId = municipalidadId;
 	}
 
 	public Date getFechaCreacion() {
@@ -114,6 +133,14 @@ public class Usuario {
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
-	
 
+	public Date getFechaActualizacion() {
+		return fechaActualizacion;
+	}
+
+	public void setFechaActualizacion(Date fechaActualizacion) {
+		this.fechaActualizacion = fechaActualizacion;
+	}
+	
+	
 }
