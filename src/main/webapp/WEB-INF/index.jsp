@@ -30,15 +30,17 @@
 	
 		<!--Div donde se muestra la informacion-->
 		<div class="informacion">
-			<p> Bienvenido a este proyecto informático. En este buscamos ayudar a las comunidades del Gran Concepcion a mantenerse 
-				comunicadas e informadas junto a sus respectivas
-				comunas y/o municipalidades. En esta aplicacion podrás encontrar funciones como: publicar post, para advertir y/o dar a conocer problemáticas de la comuna,
-				ver publicaciones y anuncios de las municipalidades, publicitar negocios particulares, entre otras cosas.
-			</p>	
+			
+			<h2> Ayuda, informa y conecta </h2>
+			
+			<h5> Bienvenid@ a FELLOW, únete a nosotros para ayudar a tu comunidad y comunícate tanto con tus vecinos como con la respectiva
+			municipalidad de tu comuna. Nos enfocamos en que tus problemas tengan solución, mediante publicaciones, avisos y comentarios puedes dejar
+			tu marca y participar actívamente de convertir tu entorno en un lugar mejor. 
+			
+			</h5>	
 			<br>
 			<p>
-				Donde sera presentado como proyecto final para la titulación del mismo. En un futuro nos gustaría presentar
-				este proyecto a diversas municipalidades del Bio Bio, para permitir una mejor conexión con todos los vecinos de las comunas. 
+				¡Convierte en un Good Fellow!
 			</p>
 		</div>
 	
@@ -95,7 +97,7 @@
 						
 					</form:select>
 					<br>
-					<button>Confrimar registro</button>
+					<button>Confirmar registro</button>
 				</form:form> 
 			 
 		</div>
