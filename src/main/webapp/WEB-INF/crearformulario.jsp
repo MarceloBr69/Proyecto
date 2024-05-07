@@ -10,7 +10,8 @@
 </head>
 <body>
 	<h2>Nuevo POST!</h2>
-	<form:form action="" method="POST">
+	<div class="container">
+		<form:form action="" method="POST">
 		<form:label path="titulo">Titulo:</form:label>
 		<form:input path="titulo" type="text"/>
 		<br>
@@ -22,5 +23,6 @@
         <br>
 		<button>Enviar</button>
 	</form:form>
+	</div>
 </body>
 </html>

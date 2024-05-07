@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#2e9f87, #d6ec8b);
+    height: 60em;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80em;
+    height: 50em;
+    color: white;
+}
