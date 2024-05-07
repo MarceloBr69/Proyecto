@@ -13,13 +13,13 @@
 	<form:form action="" method="POST">
 		<form:label path="titulo">Titulo:</form:label>
 		<form:input path="titulo" type="text"/>
-		
-		<form:label path="descripcion">Descripcion:</form:label>
-		<form:textarea path="titulo" rows="5" cols="33"/>
-		
-		<form:label path="foto">Sube una foto:</form:label>
-		<form:input type="file" path="foto"/>
-		
+		<br>
+        <form:label>Decripcion:</label>
+        <form:textarea></textarea>
+        <br>
+        <form:label>Sube una foto(opcional)</form:label>
+        <form:input type="file">
+        <br>
 		<button>Enviar</button>
 	</form:form>
 </body>
