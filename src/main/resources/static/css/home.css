@@ -46,6 +46,8 @@ a{/*Etiqueta <a></a>*/
     display: flex;
     align-items: center;
     padding-left: 30%;
+   	margin-top:2em;
+    
 
 }
 input{ /*Input del boton de busqueda*/
@@ -58,5 +60,7 @@ input{ /*Input del boton de busqueda*/
     height: 2em;
     outline: none;
     font-size: 1rem;
-
+}
+h3{
+	padding-top:2em;
 }

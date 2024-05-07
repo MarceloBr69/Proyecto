@@ -25,7 +25,7 @@
 	
 		<!--Div donde se muestra informacion de la aplicacion-->
 		<div class="divProyecto">
-			<h1>Proyecto</h1>
+			<h1>FELLOW</h1>
 		</div>
 	
 		<!--Div donde se muestra la informacion-->

@@ -18,9 +18,8 @@
             <h3>Menu</h3>
         </div>
         <div>
-        	
+        	<h3>¡Hola <c:out value="${nombre}"></c:out>!</h3>
             <ul><!--Direcciones no fijas-->
-            	<h3>¡Hola <c:out value="${nombre}"></c:out>!</h3>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Crear</a></li>
