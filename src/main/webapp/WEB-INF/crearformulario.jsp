@@ -12,31 +12,17 @@
 	<h2>Nuevo POST!</h2>
 	<div class="container">
 		<form:form action="" method="POST">
-<<<<<<< HEAD
-		<form:label path="titulo">Título:</form:label>
-		<form:input path="titulo" type="text"/>
-		<br>
-        <form:label>Descripción:</form:label>
-        <form:textarea></textarea>
-        <br>
-        <form:label>Sube una foto(opcional)</form:label>
-        <form:input type="file">
-        <br>
-		<button>Enviar</button>
-	</form:form>
-=======
-			<form:label path="titulo">Titulo:</form:label>
+			<form:label path="titulo">Título:</form:label>
 			<form:input path="titulo" type="text"/>
 			<br>
-	        <form:label path="descripcion">Descripcion:</form:label>
-	        <form:textarea path="descripcion" ></form:textarea>
+	        <form:label  path="descripcion">Descripción:</form:label>
+	        <form:textarea path="descripcion"></form:textarea>
 	        <br>
-	        <form:label path="subirFoto" >Sube una foto(opcional)</form:label>
-	        <form:input path="subirFoto" type="file"></form:input>
+	        <form:label path="subirFoto">Sube una foto(opcional)</form:label>
+	        <form:input path="subirFoto" type="file"/>
 	        <br>
 			<button>Enviar</button>
 		</form:form>
->>>>>>> 4fbf9d1903a18ff20c0e1f5e5c59bbe409d60d96
 	</div>
 </body>
 </html>
