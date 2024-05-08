@@ -9,7 +9,40 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <link rel="stylesheet" href="/css/index.css">
-		<title>Proyecto</title>
+		<title>FELLOW</title>
+		
+		<!-- Validar formato de RUT y correo -->
+		<script src="/js/script.js"></script>
+		<script>
+			function validarRegistro() {
+			    var rutInput = document.getElementById('rut').value;
+			    var correoInput = document.getElementById('correo').value;
+	
+	
+			    if (!validarCorreo(correoInput)) {
+			        alert('Formato de correo electrónico inválido');
+			        return false;
+			    }
+			    
+			    if (!validarRut(rutInput)) {
+			        alert('Formato de RUT inválido');
+			        return false;
+			    }
+			    return true;
+			}
+			
+			function validarLogin() {
+				var correoLogin = document.getElementById('correoLogin').value;
+				
+				
+				if (!validarCorreo(correoLogin)) {
+					alert("Formato de Correo inválido");
+					return false;
+				}
+				return true;
+			} 
+    	</script>
+    	
 	</head>
 	
 	<body>
@@ -23,7 +56,7 @@
 				
 			<div>
 				<ul>
-					<li><a href='#registo'>Registro</a></li>
+					<li><a href='#registro'>Registro</a></li>
 					<li><a href='#login'>Login</a></li>
 				</ul>	
 			</div>
@@ -48,7 +81,7 @@
 			</h5>	
 			<br>
 			<p>
-				¡Conviertete en un Good Fellow!
+				¡Conviértete en un Good Fellow!
 			</p>
 		</div>
 	
@@ -63,7 +96,7 @@
 			<h2>Registrarse</h2>
 			
 			
-				<form:form modelAttribute="usuario" action="/registro" method="POST">
+				<form:form modelAttribute="usuario" action="/registro" method="POST" onsubmit="return validarRegistro()">
 					<!--Nombres-->
 					<form:label path="nombre" for="nombre">Nombres:</form:label>
 					<form:input path="nombre" id="nombre" name="nombre" type="text"/>
@@ -113,7 +146,7 @@
 		<div id="login">
 			<h2>Iniciar sesión</h2>
 			
-				<form:form action="/login" method="POST" modelAttribute="loginUsuario">
+				<form:form action="/login" method="POST" modelAttribute="loginUsuario" onsubmit="return validarLogin()">
 					<!-- Correo -->
 					<form:label path="correoLogin" for="correoLogin">Correo:</form:label>
 					<form:input path="correoLogin" id="correoLogin" name="correoLogin" type="text"/>
