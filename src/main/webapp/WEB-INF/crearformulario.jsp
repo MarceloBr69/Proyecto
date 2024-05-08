@@ -12,10 +12,10 @@
 	<h2>Nuevo POST!</h2>
 	<div class="container">
 		<form:form action="" method="POST">
-		<form:label path="titulo">Titulo:</form:label>
+		<form:label path="titulo">Título:</form:label>
 		<form:input path="titulo" type="text"/>
 		<br>
-        <form:label>Decripcion:</label>
+        <form:label>Descripción:</form:label>
         <form:textarea></textarea>
         <br>
         <form:label>Sube una foto(opcional)</form:label>

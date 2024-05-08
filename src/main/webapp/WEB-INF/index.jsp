@@ -15,13 +15,21 @@
 	<body>
 		<!--Barra de navegacion-->
 		<nav>
-			<ul>
-				<li><a href='#registro'>Registro</a></li>
-				<li><a href='#login'>Login</a></li>
-			</ul>
+		<div class="contenedorNav"> 
 			
+			<div>
+				<p id="detalle"> FELLOW </p>
+			</div>
+				
+			<div>
+				<ul>
+					<li><a href='#registo'>Registro</a></li>
+					<li><a href='#login'>Login</a></li>
+				</ul>	
+			</div>
 
-		</nav>
+		</div>
+	</nav>
 	
 		<!--Div donde se muestra informacion de la aplicacion-->
 		<div class="divProyecto">
@@ -33,14 +41,14 @@
 			
 			<h2> Ayuda, informa y conecta </h2>
 			
-			<h5> Bienvenid@ a FELLOW, únete a nosotros para ayudar a tu comunidad y comunícate tanto con tus vecinos como con la respectiva
+			<h5> Bienvenid@ a FELLOW, únete a nosotros para ayudar a tu comunidad y comunincarte tanto con tus vecinos como con la respectiva
 			municipalidad de tu comuna. Nos enfocamos en que tus problemas tengan solución, mediante publicaciones, avisos y comentarios puedes dejar
 			tu marca y participar actívamente de convertir tu entorno en un lugar mejor. 
 			
 			</h5>	
 			<br>
 			<p>
-				¡Convierte en un Good Fellow!
+				¡Conviertete en un Good Fellow!
 			</p>
 		</div>
 	
