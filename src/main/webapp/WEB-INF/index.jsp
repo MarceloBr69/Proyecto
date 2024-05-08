@@ -23,6 +23,7 @@
 			        alert('Formato de correo electrónico inválido');
 			        return false;
 			    }
+			
 			    
 			    if (!validarRut(rutInput)) {
 			        alert('Formato de RUT inválido');

@@ -22,8 +22,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 0px 30px;
-	gap: 75em;
+	margin: 0;
     padding: 5px;
 }
 
