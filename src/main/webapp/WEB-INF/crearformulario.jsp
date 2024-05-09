@@ -7,19 +7,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Crear</title>
+<link rel="stylesheet" href="/css/crearformulario.css">
+<title>Crear Post</title>
 </head>
 <body>
 	<h2>Nuevo POST!</h2>
 	<div class="container">
 		<form:form modelAttribute="publicacion" action="/enviarPublicacion" method="POST">
 			<form:label path="titulo">Título:</form:label>
+			<br>
 			<form:input path="titulo" type="text"/>
 			<br>
 	        <form:label  path="descripcion">Descripción:</form:label>
-	        <form:textarea path="descripcion"></form:textarea>
+	        <br>
+	        <form:textarea path="descripcion" cols="50" />
 	        <br>
 	        <form:label path="subirFoto">Sube una foto(opcional)</form:label>
+	        <br>
 	        <form:input path="subirFoto" type="file" accept="image/png, image/jpg, image/jpeg"/>
 	        <br>
 			<button>Enviar</button>

@@ -2,7 +2,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(#2e9f87, #d6ec8b);
+    background-color: #2e9f87;
     height: 60em;
 }
 .container{
@@ -12,4 +12,10 @@ body{
     width: 80em;
     height: 50em;
     color: white;
+}
+h2{
+	color:white;
+}
+button{
+	color:black;
 }
