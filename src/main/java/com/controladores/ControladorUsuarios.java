@@ -51,7 +51,6 @@ public class ControladorUsuarios {
 								HttpSession sesion) {
 		resultado = this.servicioUsuario.validarLogin(resultado, loginUsuario);
 		if(resultado.hasErrors()) {
-			System.out.println("Error");
 			return "index.jsp";
 		}
 		Usuario usuarioExistente = this.servicioUsuario.selectPorCorreo(loginUsuario.getCorreoLogin());
@@ -61,6 +60,12 @@ public class ControladorUsuarios {
 		sesion.setAttribute("apellidos", usuarioExistente.getApellidos());
 		
 		return "redirect:/home";
+	}
+	
+	@GetMapping("/logout")
+	public String procesaLogout(HttpSession sesion) {
+		sesion.invalidate();
+		return "redirect:/";
 	}
 	
 }

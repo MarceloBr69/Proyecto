@@ -11,5 +11,5 @@ import com.modelos.Usuario;
 public interface RepositorioUsuarios extends CrudRepository<Usuario, Long>{
 	List<Usuario> findAll();
 	Usuario getByCorreo(String correo);
-
+	Usuario getById(Long id);
 }

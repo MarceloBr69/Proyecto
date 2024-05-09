@@ -22,9 +22,9 @@
             <ul><!--Direcciones no fijas-->
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Crear</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Perfil</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Logout</a></li>
+                <li><a href="/crear">Crear</a></li>
+                <li><a href="/perfil">Perfil</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
             
         </div>

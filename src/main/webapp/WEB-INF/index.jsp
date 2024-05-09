@@ -64,7 +64,7 @@
 			<div>
 				<ul>
 					<li><a href='#registro'>Registro</a></li>
-					<li><a href='#login'>Login</a></li>
+					<li><a href='#login'>Iniciar sesión</a></li>
 				</ul>	
 			</div>
 
@@ -172,6 +172,7 @@
 		
 		<footer>
 			<button>¡Haz tu donación!</button>
+			<br>
 		</footer>
 	</body>
 </html>
