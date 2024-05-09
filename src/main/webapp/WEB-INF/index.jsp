@@ -17,18 +17,24 @@
 			function validarRegistro() {
 			    var rutInput = document.getElementById('rut').value;
 			    var correoInput = document.getElementById('correo').value;
+			    var contraseña = document.getElementById('contraseña').value;
+			    var confirmarContraseña = document.getElementById('confirmarContraseña').value;
 	
-	
-			    if (!validarCorreo(correoInput)) {
-			        alert('Formato de correo electrónico inválido');
-			        return false;
-			    }
-			
-			    
 			    if (!validarRut(rutInput)) {
 			        alert('Formato de RUT inválido');
-			        return false;
+			        return false; 
 			    }
+			    
+			    if (!validarCorreo(correoInput)) {
+			        alert('Formato de correo electrónico inválido');
+			        return false; 
+			    }
+				    
+			    if (contraseña != confirmarContraseña) {
+			        alert("Contraseñas no coinciden");
+			        return false; 
+			    }
+
 			    return true;
 			}
 			
@@ -41,7 +47,7 @@
 					return false;
 				}
 				return true;
-			} 
+			}
     	</script>
     	
 	</head>
