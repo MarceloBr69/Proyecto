@@ -15,27 +15,30 @@ nav {
 	flex-direction: row;
 	justify-content: space-between;
     padding: 10px;
-	background-color: #69c16f;
+	background-color:#82b364;
 }
 
 .contenedorNav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 1em;
+	gap: 70em;
     padding: 5px;
+    margin: 0px 20px;
 }
 
 #detalle{
+	display: flex;
     color: #414950;
     font-style: italic;
     font-weight: bolder;
+    margin-left: 10px;
 }
 
 ul {
 	display: flex;
 	flex-direction: row;
-	gap: 30px;
+	gap: 40px;
 	list-style: none;
 }
 
@@ -88,7 +91,7 @@ h2{/* slogan, ayuda, informa y conecta*/
 #registro {
 	display: flex;
 	flex-direction: column;
-	background-color: #69c16f;
+	background-color:#82b364;
 	padding: 20px;
 	border-radius: 10px;
     color: white;
@@ -99,7 +102,7 @@ h2{/* slogan, ayuda, informa y conecta*/
 #login {
 	display: flex;
 	flex-direction: column;
-	background-color: #69c16f;
+	background-color:#82b364;
 	padding: 20px;
 	border-radius: 10px;
     color: white;
@@ -115,6 +118,21 @@ form {
 input {
 	border-radius: 5px;
     margin: 5px 0;
+}
+
+select{
+	margin-top: 15px;
+	padding: 3px;
+}
+
+/*estilos botones*/
+button{
+	margin-top: 20px;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: #51624f;
+	color: white;
+	font-weight: 600;
 }
 
 a {

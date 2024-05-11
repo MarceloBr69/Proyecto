@@ -18,7 +18,6 @@
             <h3>Menu</h3>
         </div>
         <div>
-        	<h3>¡Hola <c:out value="${nombre}"></c:out>!</h3>
             <ul><!--Direcciones no fijas-->
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
@@ -30,7 +29,11 @@
         </div>
 	</nav>
 	<div class="container">
-        <div class="image"><!--Aca se pone la foto como background-->
+        <div class="image">
+        
+             <h3>¡Hola <c:out value="${nombre}"></c:out>!</h3>
+        
+        <!--Aca se pone la foto como background-->
         <%--
             <div>
                 <form:form action="/buscar">
