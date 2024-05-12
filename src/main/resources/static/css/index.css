@@ -46,13 +46,15 @@ ul {
 .divProyecto {
 	display: flex;
 	flex-direction: row;
-	background-image: url(../fotos/tituloproyecto.png);
+	background-image: url(../fotos/banner1.png);
+	background-size: cover;
 	margin: 50px auto;
 	justify-content: center;
 	align-items: center;
 	color: #ffffec;
-	height: 350px;
+	height: 27em;
 	width: 100%;
+	gap: 1em;
 }
 
 h1{ /*titulo grande, FELLOW*/
@@ -60,8 +62,16 @@ h1{ /*titulo grande, FELLOW*/
     font-weight: bold;
 }
 
+#logo{
+	display: flex;
+}
+
 h2{/* slogan, ayuda, informa y conecta*/
     font-size: 40px;
+}
+
+p{
+	font-style: italic;
 }
 
 /* descripción general de la aplicación, informaciones*/
@@ -73,8 +83,8 @@ h2{/* slogan, ayuda, informa y conecta*/
 	width: 80%;
 	margin: 0px auto;
 	color:#414950;
-    gap: 25px;
-    margin-bottom: 25px;
+    gap: 3em;
+    margin-bottom: 3.5em;
 }
 
 
@@ -82,7 +92,7 @@ h2{/* slogan, ayuda, informa y conecta*/
 .formulario {
 	display: flex;
 	padding: 20px;
-	gap: 50px;
+	gap: 3em;
 	justify-content: center;
 	margin-top: 40px;
 }
@@ -91,22 +101,26 @@ h2{/* slogan, ayuda, informa y conecta*/
 #registro {
 	display: flex;
 	flex-direction: column;
-	background-color:#82b364;
-	padding: 20px;
+	border: solid 1px white;
+	padding: 1.5em;
 	border-radius: 10px;
-    color: white;
+    color:  #414950;
     gap: 15px;
+    width: 30%;
+    box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
 /*formulario de login*/
 #login {
 	display: flex;
 	flex-direction: column;
-	background-color:#82b364;
-	padding: 20px;
+	border: solid 1px white;
+	padding: 1.5em;
 	border-radius: 10px;
-    color: white;
+    color:  #414950;
     gap: 15px;
+    width: 25%;
+    box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
 /*estilos forms en general */
@@ -118,19 +132,21 @@ form {
 input {
 	border-radius: 5px;
     margin: 5px 0;
+    height: 2em;
+    background-color: #eff5e7;
 }
 
 select{
 	margin-top: 15px;
-	padding: 3px;
+	padding: 0.3em;
 }
 
 /*estilos botones*/
 button{
 	margin-top: 20px;
-	padding: 5px;
+	padding: 0.5em;
 	border-radius: 10px;
-	background-color: #51624f;
+	background-color: #82b364;
 	color: white;
 	font-weight: 600;
 }

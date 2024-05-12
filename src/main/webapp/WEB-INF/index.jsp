@@ -73,6 +73,9 @@
 	
 		<!--Div donde se muestra informacion de la aplicacion-->
 		<div class="divProyecto">
+		
+			<img id="logo" src="../static/css/fotos/logoblanco.png" alt="logo en blanco"/>
+			
 			<h1>FELLOW</h1>
 		</div>
 	
@@ -86,7 +89,6 @@
 			tu marca y participar actívamente de convertir tu entorno en un lugar mejor. 
 			
 			</h5>	
-			<br>
 			<p>
 				¡Conviértete en un Good Fellow!
 			</p>
