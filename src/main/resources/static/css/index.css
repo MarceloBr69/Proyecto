@@ -149,6 +149,7 @@ button{
 	background-color: #82b364;
 	color: white;
 	font-weight: 600;
+	cursor: pointer;
 }
 
 a {
