@@ -31,7 +31,7 @@
 	<div class="container">
         <div class="image">
         
-             <h3>¡Hola <c:out value="${nombre}"></c:out>!</h3>
+             <h1>¡Hola <c:out value="${nombre}"></c:out>!</h1>
         
         <!--Aca se pone la foto como background-->
         <%--

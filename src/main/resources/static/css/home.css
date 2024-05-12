@@ -12,37 +12,40 @@ body {
 h3{
 	display: flex;
     color: white;
-    background-color: #69c16f;
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    justify-content: end;
     align-items: center;
-    padding:20px;
-    border-radius: 20px;
 }
 nav{/*Contenedor nav*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-    padding: 10px;
-	background-color: #69c16f;
+	background-color:#82b364;
+	align-items: center;
+	padding: 0.7em;
 }
+
 .name-logo{
     padding-left: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 ul{/*Etiqueta <ul></ul>*/
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 50%;
     padding-right: 20%;
     list-style: none;
 }
-li{/*Etiqueta <li></li>*/
-    padding-top: 0.5%;    
-}
+
 a{/*Etiqueta <a></a>*/
     text-decoration: none;
     color: white;
 }
+
 .container{/*Div container donde se obtiene informacion del mapa e inputs*/
     display: flex;
     justify-content: center;
@@ -73,7 +76,4 @@ input{ /*Input del boton de busqueda*/
     height: 2em;
     outline: none;
     font-size: 1rem;
-}
-h3{
-	padding-top:2em;
 }
