@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+	font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: white;
+}
+
+/*estilos barra navegacion */
+
+nav{/*Contenedor nav*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color:#82b364;
+	align-items: center;
+	padding: 0.7em;
+}
+
+.name-logo{
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ul{/*Etiqueta <ul></ul>*/
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 50%;
+    padding-right: 20%;
+    list-style: none;
+}
+
+a{/*Etiqueta <a></a>*/
+    text-decoration: none;
+    color: white;
+}
+
+/* estilos muestra perfil*/
+
+.top{/*contenedor superior*/
+	display:flex;
+	padding: 2em;
+	color:  #414950;
+	width: 70%;
+	margin-bottom: 0;
+	margin-left: 5em; /*cambiar este margin a auto cuando agregue otra seccion*/
+}
+
+.fotoPerfil{
+	display:flex;
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	margin: 1em;
+	margin-top: 2em;
+	border-radius: 7em;
+}
+
+.seccionTop{/*contenedor dentro del contenedorsuperior*/
+	display: flex;
+	flex-direction: column;
+	margin: 2em;
+	width: 40%;
+}
+
+h1{
+	font-size: 55px;
+}
+
+button{
+	margin: 1em 0;
+	padding: 0.3em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* estilos historial de actividades*/
+
+.historialActividad{
+	display: flex;
+	flex-direction: column;
+	margin: 0.2em auto;
+	width: 90%;
+}
+
+.publicaciones{
+	background-color: #eff5e7;
+	color:  #414950;
+	overflow: scroll;
+	width: 100%;
+	height: 8em;
+	margin-bottom: 3em;
+}
+
+#actividad{
+	font-size: 30px;
+	color: #414950;
+	margin: 1em;
+}
+
+
+
