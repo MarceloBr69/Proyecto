@@ -93,40 +93,7 @@
 
 		</div>
 	    
-	    <%-- 
-	    <!--Tabla donde se muestran los datos del usuario-->
-	    <table>
-	        <tr>
-	            <th>
-	                Nombre:
-	            </th>
-	            <th>
-	                Apellidos:
-	            </th>
-	            <th>
-	                Email:
-	            </th>
-	            <th>
-	                Municipalidad:
-	            </th>
-	        </tr>
-	        <tr>
-	            <td>
-	                <c:forEach value="${nombre}"/>
-	            </td>
-	            <td>
-	                <c:forEach value="${apellidos}"/>
-	            </td>
-	            <td>
-	                <c:forEach value="${correo}"/>
-	            </td>
-	            <td>
-	                <c:forEach value="${municipalidadId}"/>
-	            </td>
-	        </tr>
-	    </table>
-	--%>
-	
+
 	
 		
 	    

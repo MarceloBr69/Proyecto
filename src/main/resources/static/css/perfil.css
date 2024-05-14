@@ -18,6 +18,9 @@ nav{/*Contenedor nav*/
 	background-color:#82b364;
 	align-items: center;
 	padding: 0.7em;
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 .name-logo{
@@ -31,8 +34,8 @@ ul{/*Etiqueta <ul></ul>*/
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 50%;
-    padding-right: 20%;
+    gap: 40%;
+    padding-right: 30%;
     list-style: none;
 }
 
@@ -48,6 +51,7 @@ a{/*Etiqueta <a></a>*/
 	padding: 2em;
 	color:  #414950;
 	width: 70%;
+	margin-top: 1.5em;
 	margin-bottom: 0;
 	margin-left: 5em; /*cambiar este margin a auto cuando agregue otra seccion*/
 }

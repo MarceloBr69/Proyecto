@@ -16,6 +16,9 @@ nav {
 	justify-content: space-between;
     padding: 0.5em;
 	background-color:#82b364;
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 .contenedorNav {
@@ -48,7 +51,7 @@ ul {
 	flex-direction: row;
 	background-image: url(../fotos/banner1.png);
 	background-size: cover;
-	margin: 50px auto;
+	margin: 5.5em auto;
 	justify-content: center;
 	align-items: center;
 	color: #ffffec;

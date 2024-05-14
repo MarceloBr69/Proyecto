@@ -74,7 +74,7 @@
 		<!--Div donde se muestra informacion de la aplicacion-->
 		<div class="divProyecto">
 		
-			<img id="logo" src="../static/css/fotos/logoblanco.png" alt="logo en blanco"/>
+			<img id="logo" src="<c:url value="/static/fotos/logoblanco.png"/>" alt="logo en blanco"/>
 			
 			<h1>FELLOW</h1>
 		</div>
