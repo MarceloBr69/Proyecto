@@ -21,6 +21,12 @@ nav {
 	width: 100%;
 	position: fixed;
 	top: 0;
+	height: 5%;
+}
+
+#nameLogo{
+	display: flex;
+	height: 25px;
 }
 
 .contenedorNav {
@@ -30,14 +36,6 @@ nav {
 	gap: 70em;
     padding: 0.2em;
     margin: 0px 20px;
-}
-
-#detalle{
-	display: flex;
-    color: #414950;
-    font-style: italic;
-    font-weight: bolder;
-    margin-left: 10px;
 }
 
 ul {
@@ -56,19 +54,20 @@ ul {
 	margin: 5.5em auto;
 	justify-content: center;
 	align-items: center;
-	color: #ffffec;
+	color: white;
 	height: 27em;
 	width: 100%;
 	gap: 1em;
 }
 
 h1{ /*titulo grande, FELLOW*/
-    font-size: 75px;
+    font-size: 100px;
     font-weight: bold;
 }
 
 #logo{
 	display: flex;
+	width: 10em;
 }
 
 h2{/* slogan, ayuda, informa y conecta*/

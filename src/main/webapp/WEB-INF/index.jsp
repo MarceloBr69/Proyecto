@@ -58,7 +58,7 @@
 		<div class="contenedorNav"> 
 			
 			<div>
-				<p id="detalle"> FELLOW </p>
+				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
 			</div>
 				
 			<div>
@@ -74,7 +74,7 @@
 		<!--Div donde se muestra informacion de la aplicacion-->
 		<div class="divProyecto">
 		
-			<img id="logo" src="<c:url value="/static/fotos/logoblanco.png"/>" alt="logo en blanco"/>
+			<img id="logo" src="fotos/logoblanco.png" alt="logo en blanco"/>
 			
 			<h1>FELLOW</h1>
 		</div>
