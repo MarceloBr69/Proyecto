@@ -16,6 +16,7 @@
 		<div class="name-logo">
             <!--Logo img-->
             <h3>Menu</h3>
+            <h1>¡Hola <c:out value="${nombre}"></c:out>!</h1>
         </div>
         <div>
             <ul><!--Direcciones no fijas-->
@@ -25,15 +26,11 @@
                 <li><a href="/perfil">Perfil</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
-            
         </div>
 	</nav>
 	<div class="container">
-        <div class="image">
-        
-             <h1>¡Hola <c:out value="${nombre}"></c:out>!</h1>
-        
-        <!--Aca se pone la foto como background-->
+        <div class="image"> <!--Aca se pone la foto del mapa como background-->
+        <div id="map"></div>
         <%--
             <div>
                 <form:form action="/buscar">
@@ -47,5 +44,7 @@
 	<div>
 		<h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus asperiores enim, itaque veniam nulla accusantium minus tenetur commodi ut!</h2>
 	</div>
+<script src="../js/home.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
 </body>
 </html>

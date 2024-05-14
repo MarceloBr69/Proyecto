@@ -4,7 +4,10 @@
 	font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+h1{
+	color: white; 
+	margin-left:2em;
+}
 body {
 	background-color: white;
 }
@@ -77,3 +80,10 @@ input{ /*Input del boton de busqueda*/
     outline: none;
     font-size: 1rem;
 }
+
+
+#map{ /*Api mapa*/
+	height:500px;
+	width:100%;
+}
+

@@ -4,7 +4,9 @@
 	font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+html{/*Programando el scroll*/
+	scroll-behavior: smooth; 
+}
 body {
 	background-color: white;
 }
@@ -49,7 +51,7 @@ ul {
 .divProyecto {
 	display: flex;
 	flex-direction: row;
-	background-image: url(../fotos/banner1.png);
+	background-image: url(../src/static/fotos/banner1.png);
 	background-size: cover;
 	margin: 5.5em auto;
 	justify-content: center;
