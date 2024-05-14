@@ -51,7 +51,7 @@ ul {
 .divProyecto {
 	display: flex;
 	flex-direction: row;
-	background-image: url(../src/static/fotos/banner1.png);
+	background-image: url(../fotos/banner1.png);
 	background-size: cover;
 	margin: 5.5em auto;
 	justify-content: center;
