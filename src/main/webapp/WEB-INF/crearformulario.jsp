@@ -29,5 +29,8 @@
 			<button>Enviar</button>
 		</form:form>
 	</div>
+	<div> <!-- La finalidad de este div es crear un recuadro izquierdo, donde se mostrara de forma de exposicion la imagen cargada. -->
+		
+	</div>
 </body>
 </html>

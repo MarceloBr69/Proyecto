@@ -12,7 +12,7 @@
 <body>
     <h1>Publicaciones!</h1>
     <div class="link-posts">
-        <a href="/post/{id}"><c:out value="${titulo}"/></a>
+		<div>
     </div>
 </body>
 </html>

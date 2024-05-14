@@ -2,7 +2,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #2e9f87;
+    background-color:white; 
     height: 60em;
 }
 .container{
@@ -11,10 +11,7 @@ body{
     align-items: center;
     width: 80em;
     height: 50em;
-    color: white;
-}
-h2{
-	color:white;
+    color: black;
 }
 button{
 	color:black;

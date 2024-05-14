@@ -29,22 +29,27 @@
         </div>
 	</nav>
 	<div class="container">
+		<div>
+			<p>Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
+			<br>
+			<p>En esta pestana podras acceder a distintos apartados, como ver los Post, Crear uno, ver tu Perfil.</p>
+			<br>
+			<p>Actualmente el mapa no se encuentra en uso.</p>
+		</div>
         <div class="image"> <!--Aca se pone la foto del mapa como background-->
-        <div id="map"></div>
-        <%--
-            <div>
-                <form:form action="/buscar">
-                    <form:input path="buscar" type="text" placeholder="Buscar..."></form:input>
-                </form:form>
-            </div>
-            
-         --%>
+        	<div id="map"></div> <!-- En este div se invoca el mapa -->
         </div>
 	</div>
-	<div>
-		<h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus asperiores enim, itaque veniam nulla accusantium minus tenetur commodi ut!</h2>
-	</div>
-<script src="../js/home.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
+	<footer>
+		<div class="derechos">
+			<p>© 2024 Fellow. Todos los derechos reservados. Fellow© 2024. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
+		</div>
+	</footer>
+	
+	
+	<script src="../js/home.js"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
+
+
 </body>
 </html>

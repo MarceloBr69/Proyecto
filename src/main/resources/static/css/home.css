@@ -87,3 +87,14 @@ input{ /*Input del boton de busqueda*/
 	width:100%;
 }
 
+footer{/*footer*/
+	background-color: green;
+	height:7em;
+}
+.derechos{ /*Div de parrafo derecho*/
+	display: flex;
+	padding-top:20px;
+	justify-content: center;
+	align-items:center;
+}
+
