@@ -16,30 +16,53 @@
 		<div class="name-logo">
             <!--Logo img-->
             <h3>Menu</h3>
-            <h1>¡Hola <c:out value="${nombre}"></c:out>!</h1>
         </div>
         <div>
             <ul><!--Direcciones no fijas-->
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Eventos</a></li>
                 <li><a href="/crear">Crear</a></li>
                 <li><a href="/perfil">Perfil</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
 	</nav>
-	<div class="container">
-		<div>
+	<section class="container-funcion"> <!-- Contenedor del mapa y actividad reciente -->
+		<div> <!--Aca se pone la foto del mapa como background-->
 			<p>Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
 			<br>
 			<p>En esta pestana podras acceder a distintos apartados, como ver los Post, Crear uno, ver tu Perfil.</p>
-			<br>
-			<p>Actualmente el mapa no se encuentra en uso.</p>
-		</div>
-        <div class="image"> <!--Aca se pone la foto del mapa como background-->
-        	<div id="map"></div> <!-- En este div se invoca el mapa -->
-        </div>
-	</div>
+        	<br>
+        	<div id="map"></div>
+        	<br>
+        	<p>Actualmente el mapa no se encuentra operando.</p>
+    	     <!-- <div id="map"></div> En este div se invoca el mapa -->
+	    </div>
+	    <div class="actividad-reciente">
+	    	<h2>Actividad reciente</h2>
+	    	<div>
+	    		<p class="post-actividad-reciente"><c:out value="${nombre}"/> |</p>
+	    	</div>
+	    	<div>
+	    		<p><c:out value="${titulo}"/></p>
+	    	</div>
+			
+	    	
+	    	
+	    	
+	    	
+	    </div>
+	</section>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<footer>
 		<div class="derechos">
 			<p>© 2024 Fellow. Todos los derechos reservados. Fellow© 2024. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
@@ -48,7 +71,7 @@
 	
 	
 	<script src="../js/home.js"></script>
-	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
 
 
 </body>

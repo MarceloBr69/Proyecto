@@ -49,26 +49,6 @@ a{/*Etiqueta <a></a>*/
     color: white;
 }
 
-.container{/*Div container donde se obtiene informacion del mapa e inputs*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image{ /*Contenedor con la clase imagen, donde posee un background-image*/
-    width: 50%;
-    height: 47em;
-    background-image: url(../fotos/mapa1.png); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    padding-left: 30%;
-   	margin-top:2em;
-    
-
-}
 input{ /*Input del boton de busqueda*/
     padding: 10px;
     padding-right: 20px;
@@ -88,13 +68,48 @@ input{ /*Input del boton de busqueda*/
 }
 
 footer{/*footer*/
-	background-color: green;
+	background-color: #25252A;
 	height:7em;
+	color:white;
 }
 .derechos{ /*Div de parrafo derecho*/
 	display: flex;
 	padding-top:20px;
 	justify-content: center;
 	align-items:center;
+}
+.bienvenida{/*div donde se le da la bienvenida al usuario*/
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+	
+	height: 20em;
+}
+
+.container-funcion{/* Contenedor del mapa y actividad reciente */
+	padding-top:2em;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+} 
+.actividad-reciente{
+	height: 20em;
+	width: 40em;
+	border: solid black 2px;
+	color:black;
+	margin-left: 4em;
+	
+	padding:2em;
+	display:inline-block;
+}
+
+.post-actividad-reciente{
+	border-top: solid green;
+	border-bottom:solid green;
+	padding-left:2em;
+	margin-top:1em;
+	
+	width: 90%;
 }
 
