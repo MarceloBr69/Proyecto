@@ -111,10 +111,12 @@ footer{/*footer*/
 	border: solid black 2px;
 	border-radius:2em;
 	color:#414950;
-	margin-left: 4em;
+	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
 	
+	margin-left: 4em;
 	padding:2em;
 	display:inline-block;
+	
 }
 
 .post-actividad-reciente{
