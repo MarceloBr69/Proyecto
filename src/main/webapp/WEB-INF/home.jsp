@@ -20,13 +20,12 @@
 			</div>
 			
 	        <div>
-	              <ul><!--Direcciones no fijas-->
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
-                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Eventos</a></li>
-                <li><a href="/crear">Crear</a></li>
-                <li><a href="/perfil">Perfil</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
+		        <ul><!--Direcciones no fijas-->
+	                <li><a href="/eventos">Eventos</a></li>
+	                <li><a href="/publicar">Publicar</a></li>
+	                <li><a href="/perfil">Perfil</a></li>
+	                <li><a href="/logout">Logout</a></li>
+	            </ul>
 	        </div>
 	        
 		</div>
@@ -51,6 +50,38 @@
 	    		<p><c:out value="${titulo}"/></p>
 	    	</div>
 			
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th>Título</th>
+							<th>Publicado por</th>
+							<th>Fecha</th>
+							<th>Comuna</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+					<%--
+						<c:forEach var="publicacion" items="${publicaciones}">
+		                <tr>
+		                    <td> <c:out value= "${publicacion.titulo}"></c:out></td>
+		                    <td> <c:out value= "${publicacion.usuario.nombre}"></c:out></td>
+		                    <td> <c:out value= "${publicacion.fechaEvento}"></c:out></td>
+		                    <td>
+		                    	<a href="#">Detalle</a>
+		                    	<c:if test="${idUsuario == publicacion.usuario.id}">
+		                    		<a href="#">Editar</a>
+		                    		<a href="#">Eliminar</a>
+		                    	</c:if>
+		                    </td>
+		                </tr>
+		                </c:forEach>
+		                
+		             --%>
+		            </tbody>
+				</table>
+			</div>
 	    	
 	    	
 	    	
@@ -75,7 +106,7 @@
 	
 	
 	<script src="../js/home.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script>--> <!-- Este scrpit invoca al mapa -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script> <!-- Este scrpit invoca al mapa -->
 
 
 </body>

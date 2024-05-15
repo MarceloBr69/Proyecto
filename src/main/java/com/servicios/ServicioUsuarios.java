@@ -15,6 +15,12 @@ public class ServicioUsuarios {
 	@Autowired
 	private RepositorioUsuarios repositorioUsuario;
 	
+	public Usuario registrarUsuario(Usuario nuevoUsuario) {
+		String contraseñaEncriptada = BCrypt.hashpw(nuevoUsuario.getContraseña(), BCrypt.gensalt());
+		nuevoUsuario.setContraseña(contraseñaEncriptada);
+		return this.repositorioUsuario.save(nuevoUsuario);
+	}
+	
 	public BindingResult validarRegistro(BindingResult resultado, Usuario nuevoUsuario) {
 		if(! nuevoUsuario.getContraseña().equals(nuevoUsuario.getConfirmarContraseña())) {
 			resultado.rejectValue("confirmarContraseña", "Matches", "Las contraseñas no coinciden");
@@ -40,11 +46,7 @@ public class ServicioUsuarios {
 		return resultado;
 	}
 	
-	public Usuario registrarUsuario(Usuario nuevoUsuario) {
-		String contraseñaEncriptada = BCrypt.hashpw(nuevoUsuario.getContraseña(), BCrypt.gensalt());
-		nuevoUsuario.setContraseña(contraseñaEncriptada);
-		return this.repositorioUsuario.save(nuevoUsuario);
-	}
+
 	
 	public Usuario selectPorCorreo(String correo) {
 		return this.repositorioUsuario.getByCorreo(correo);

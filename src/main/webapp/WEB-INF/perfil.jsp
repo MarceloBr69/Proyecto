@@ -14,26 +14,23 @@
 	
 	<!-- barra de navegación, se repite en todos los jsp posteriores al login -->
 	<nav>
-		<div class="contenedorNav">
+			<div class="contenedorNav">
 		
 			<div>
 				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
 			</div>
 			
 	        <div>
-	            <ul><!--Direcciones no fijas-->
-	            	<li><a href="/home">Inicio</a></li>
-	                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
-	                <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Ver</a></li>
-	                <li><a href="/crear">Crear</a></li>
-	                <li><a href="/perfil">Perfil</a></li>
+		        <ul><!--Direcciones no fijas-->
+		        	<li><a href="/home">Inicio</a></li>
+	                <li><a href="/eventos">Eventos</a></li>
+	                <li><a href="/publicar">Publicar</a></li>
 	                <li><a href="/logout">Logout</a></li>
 	            </ul>
 	        </div>
 	        
 		</div>
-		
-		</nav>
+	</nav>
 		
 		<div class="top">
 		

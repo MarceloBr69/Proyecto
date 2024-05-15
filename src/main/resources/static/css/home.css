@@ -123,3 +123,9 @@ footer{/*footer*/
 	width: 90%;
 }
 
+table {
+   width: 100%;
+}
+th, td {
+   width: 25%;
+}

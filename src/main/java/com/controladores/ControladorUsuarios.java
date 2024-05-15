@@ -20,12 +20,7 @@ public class ControladorUsuarios {
 	@Autowired
 	private ServicioUsuarios servicioUsuario;
 	
-	@GetMapping("/")
-	public String mostrarInicio(@ModelAttribute("usuario") Usuario usuario,
-								@ModelAttribute("loginUsuario") LoginUsuario loginUsuario) {
-		return "index.jsp";
-	}
-	
+
 	@PostMapping("/registro")
 	public String registrarUsuario(@Valid @ModelAttribute("usuario") Usuario nuevoUsuario,
 									BindingResult resultado,
@@ -67,6 +62,7 @@ public class ControladorUsuarios {
 		sesion.invalidate();
 		return "redirect:/";
 	}
+
 	
 }
 

@@ -15,6 +15,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -25,13 +26,19 @@ public class Publicaciones {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
-	@Size(min=2, message="Proporciona un título")
+	@NotNull
+	@Size(min=2, message="El título no puede estar vacío")
     private String titulo;
 	
 	@Size(min=2, message="Proporciona tu una descripción")
     private String descripcion;
-    private String subirFoto; 
-    
+	
+    private String subirFoto;
+	
+	@DateTimeFormat(pattern="yyyy-MM-ss")
+    private Date fechaEvento;
+	
+
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-ss")
 	private Date fechaCreacion;
@@ -116,6 +123,14 @@ public class Publicaciones {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	public Date getFechaEvento() {
+		return fechaEvento;
+	}
+
+	public void setFechaEvento(Date fechaEvento) {
+		this.fechaEvento = fechaEvento;
 	}
 
 }
