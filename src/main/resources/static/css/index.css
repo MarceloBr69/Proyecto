@@ -33,15 +33,16 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 70em;
+	gap: 60%;
     padding: 0.2em;
-    margin: 0px 20px;
+    margin: 0 2em;
+    width:100%;
 }
 
 ul {
 	display: flex;
 	flex-direction: row;
-	gap: 40px;
+	gap: 3em;
 	list-style: none;
 }
 

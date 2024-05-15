@@ -11,38 +11,45 @@ body {
 
 /*estilos barra navegacion */
 
-nav{/*Contenedor nav*/
+nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+    padding: 0.5em;
 	background-color:#82b364;
-	align-items: center;
-	padding: 0.7em;
 	width: 100%;
 	position: fixed;
 	top: 0;
+	height: 5%;
 }
 
-.name-logo{
-    padding-left: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-ul{/*Etiqueta <ul></ul>*/
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 40%;
-    padding-right: 30%;
-    list-style: none;
+#nameLogo{
+	display: flex;
+	height: 25px;
 }
 
-a{/*Etiqueta <a></a>*/
-    text-decoration: none;
-    color: white;
+.contenedorNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 60%;
+    padding: 0.2em;
+    margin: 0 2em;
+    width: 100%;
 }
+
+ul {
+	display: flex;
+	flex-direction: row;
+	gap: 3em;
+	list-style: none;
+}
+	
+a{
+	text-decoration:none;
+	color: white; 
+}
+	
 
 /* estilos muestra perfil*/
 

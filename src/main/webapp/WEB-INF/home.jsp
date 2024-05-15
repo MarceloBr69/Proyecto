@@ -13,19 +13,23 @@
 </head>
 <body>
 	<nav>
-		<div class="name-logo">
-            <!--Logo img-->
-            <h3>Menu</h3>
-        </div>
-        <div>
-            <ul><!--Direcciones no fijas-->
+			<div class="contenedorNav">
+		
+			<div>
+				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
+			</div>
+			
+	        <div>
+	              <ul><!--Direcciones no fijas-->
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Post</a></li>
                 <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Eventos</a></li>
                 <li><a href="/crear">Crear</a></li>
                 <li><a href="/perfil">Perfil</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
-        </div>
+	        </div>
+	        
+		</div>
 	</nav>
 	<section class="container-funcion"> <!-- Contenedor del mapa y actividad reciente -->
 		<div> <!--Aca se pone la foto del mapa como background-->

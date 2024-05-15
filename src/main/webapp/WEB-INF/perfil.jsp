@@ -14,10 +14,12 @@
 	
 	<!-- barra de navegación, se repite en todos los jsp posteriores al login -->
 	<nav>
-			<div class="name-logo">
-	            <!--Logo img-->
-	            <h3>Menu</h3>
-	        </div>
+		<div class="contenedorNav">
+		
+			<div>
+				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
+			</div>
+			
 	        <div>
 	            <ul><!--Direcciones no fijas-->
 	            	<li><a href="/home">Inicio</a></li>
@@ -27,8 +29,10 @@
 	                <li><a href="/perfil">Perfil</a></li>
 	                <li><a href="/logout">Logout</a></li>
 	            </ul>
-	            
 	        </div>
+	        
+		</div>
+		
 		</nav>
 		
 		<div class="top">

@@ -82,12 +82,11 @@
 		<!--Div donde se muestra la informacion-->
 		<div class="informacion">
 			
-			<h2> Ayuda, informa y conecta </h2>
+			<h2> Descubre, comparte y conecta </h2>
 			
-			<h5> Bienvenid@ a FELLOW, únete a nosotros para ayudar a tu comunidad y comunincarte tanto con tus vecinos como con la respectiva
-			municipalidad de tu comuna. Nos enfocamos en que tus problemas tengan solución, mediante publicaciones, avisos y comentarios puedes dejar
-			tu marca y participar actívamente de convertir tu entorno en un lugar mejor. 
-			
+			<h5> Bienvenid@ a FELLOW, únete a nuestra comunidad para descubrir y compartir todo lo que ocurra
+			a tus alrededores. No te pierdas de nada, aprovecha las oportunidades y eventos en tu cercanía, conoce
+			las novedades y acércate a tus vecinos.
 			</h5>	
 			<p>
 				¡Conviértete en un Good Fellow!
