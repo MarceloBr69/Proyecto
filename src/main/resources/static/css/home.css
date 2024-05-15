@@ -78,8 +78,8 @@ input{ /*Input del boton de busqueda*/
 }
 
 footer{/*footer*/
-	background-color: #25252A;
-	height:7em;
+	background-color:#414950;
+	height:7.5em;
 	color:white;
 }
 .derechos{ /*Div de parrafo derecho*/
@@ -98,16 +98,19 @@ footer{/*footer*/
 }
 
 .container-funcion{/* Contenedor del mapa y actividad reciente */
-	padding-top:2em;
 	display:flex;
 	justify-content: center;
 	align-items:center;
+	
+	padding-top:5em;
+	padding-bottom:10em;
 } 
 .actividad-reciente{
 	height: 20em;
 	width: 40em;
 	border: solid black 2px;
-	color:black;
+	border-radius:2em;
+	color:#414950;
 	margin-left: 4em;
 	
 	padding:2em;
@@ -128,4 +131,12 @@ table {
 }
 th, td {
    width: 25%;
+}
+.table-actividad-reciente{
+	display: flex;
+	justify-content:center;
+	padding-top:1em;
+}
+h2{
+	border-bottom: solid green;
 }

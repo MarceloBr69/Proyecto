@@ -34,7 +34,7 @@
 		<div> <!--Aca se pone la foto del mapa como background-->
 			<p>Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
 			<br>
-			<p>En esta pestana podras acceder a distintos apartados, como ver los Post, Crear uno, ver tu Perfil.</p>
+			<p>En esta pestana podras acceder a distintos apartados, como ver los Post, Crear uno y/o ver tu Perfil.</p>
         	<br>
         	<div id="map"></div>
         	<br>
@@ -42,15 +42,8 @@
     	     <!-- <div id="map"></div> En este div se invoca el mapa -->
 	    </div>
 	    <div class="actividad-reciente">
-	    	<h2>Actividad reciente</h2>
-	    	<div>
-	    		<p class="post-actividad-reciente"><c:out value="${nombre}"/> |</p>
-	    	</div>
-	    	<div>
-	    		<p><c:out value="${titulo}"/></p>
-	    	</div>
-			
-			<div>
+	    	<h2>Publicaciones recientes</h2>
+			<div class="table-actividad-reciente">
 				<table>
 					<thead>
 						<tr>
@@ -58,7 +51,6 @@
 							<th>Publicado por</th>
 							<th>Fecha</th>
 							<th>Comuna</th>
-							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
