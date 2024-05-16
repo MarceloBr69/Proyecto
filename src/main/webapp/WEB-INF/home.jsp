@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +53,6 @@
 						</tr>
 					</thead>
 					<tbody>
-					
 						<c:forEach var="publicacion" items="${publicaciones}">
 		                <tr>
 		                    <td> <c:out value= "${publicacion.titulo}"></c:out></td>
@@ -69,8 +67,6 @@
 		                    </td>
 		                </tr>
 		                </c:forEach>
-		                
-		             
 		            </tbody>
 				</table>
 			</div>
