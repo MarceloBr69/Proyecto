@@ -37,29 +37,16 @@
 		
 	    <h1>Eventos cercanos</h1>
 	    
-	    <div class="contenedorPublicaciones">
-	    	
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	    <h2>HOLAAAAAAAA</h2>
-	    	
+	   <div class="contenedorPublicaciones">
+	   		<c:forEach var="publicacion" items="${publicaciones}">
+	            <div class="contenedorIndividual">
+	                <h3> <c:out value="${publicacion.titulo}"/> </h3>
+	                <p> <c:out value="${publicacion.descripcion}"/> </p>
+	                <div>
+	                    <p> imagen </p>
+	                </div>
+	            </div>
+            </c:forEach>
 	    </div>
 	    
 	    <footer>

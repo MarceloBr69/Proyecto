@@ -54,7 +54,7 @@
 						</tr>
 					</thead>
 					<tbody>
-					<%--
+					
 						<c:forEach var="publicacion" items="${publicaciones}">
 		                <tr>
 		                    <td> <c:out value= "${publicacion.titulo}"></c:out></td>
@@ -70,7 +70,7 @@
 		                </tr>
 		                </c:forEach>
 		                
-		             --%>
+		             
 		            </tbody>
 				</table>
 			</div>
@@ -92,14 +92,10 @@
 	
 	<footer>
 		<div class="derechos">
-			<p>© 2024 Fellow. Todos los derechos reservados. Fellow© 2024. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
+			<p>© 2024 Fellow. Todos los derechos reservados. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
 		</div>
 	</footer>
-	
-	
 	<script src="../js/home.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMapa"></script> <!-- Este scrpit invoca al mapa -->
-
-
 </body>
 </html>

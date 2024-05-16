@@ -1,32 +1,26 @@
-
-*{
+*{/*VALORES ESTANDAR*/
     margin: 0;
     padding: 0;
 	font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-body{
+body{ /*Body*/
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color:white; 
     height: 60em;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80em;
-    height: 50em;
-    color: black;
+.contenedorNav {/*Contenedor principal de la barra de navegacion*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 60%;
+    padding: 0.2em;
+    margin: 0 2em;
+    width: 100%;
 }
-button{
-	color:black;
-}
-
-nav {
+nav {/*Barra de navegacion*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -37,31 +31,52 @@ nav {
 	top: 0;
 	height: 5%;
 }
-
-#nameLogo{
+#nameLogo{/*Segmento de la imagen*/
 	display: flex;
 	height: 25px;
 }
-
-.contenedorNav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	gap: 60%;
-    padding: 0.2em;
-    margin: 0 2em;
-    width: 100%;
-}
-
-ul {
+ul {/*Listado de links*/
 	display: flex;
 	flex-direction: row;
 	gap: 3em;
 	list-style: none;
 }
-	
-a{
+a{/*Anchore del listado*/
 	text-decoration:none;
 	color: white; 
 }
+.container{/*Div con la class container, contenedor del formulario*/
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color: black;
+    padding-top:5em;
+	padding-bottom: 30em;
+}
+button{/*Boton del formulario*/
+	color:black;
+}
+
+form{/*Formulario*/
+	padding-left:10em;
+	padding-right:10em;
+	padding-top:2em;
+	padding-bottom:10em;
+	
+	border: solid #c0c0c0 2px;
+	border-radius:2em;
+	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+textarea{/*TextArea*/
+	resize:none;
+	height: 5em;
+}
+textarea, .text_input{/*TextArea e Input titulo*/
+	display:flex;
+	align-items:center;
+	width:90%;
+	padding:2%;
+}
+	
+
 	

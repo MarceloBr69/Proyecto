@@ -12,14 +12,13 @@
 </head>
 <body>
 	<nav>
-			<div class="contenedorNav">
-		
-			<div>
+		<div class="contenedorNav">
+			<div> <!-- Logo de la empresa -->
 				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
 			</div>
 			
 	        <div>
-		        <ul><!--Direcciones no fijas-->
+		        <ul><!-- Direcciones-->
 		        	<li><a href="/home">Inicio</a></li>
 	                <li><a href="/eventos">Eventos</a></li>
 	                <li><a href="/perfil">Perfil</a></li>
@@ -29,33 +28,36 @@
 	        
 		</div>
 	</nav>
-	<h2>Nuevo POST!</h2>
+	
 	<div class="container">
 		<form:form modelAttribute="publicacion" action="/enviarPublicacion" method="POST">
-			<form:label path="titulo">Título del evento:</form:label>
-			<form:input path="titulo" type="text"/>
+			<h2>Crea una publicacion!</h2>
+			<br>
+			<form:label path="titulo">Nombre del evento:</form:label>
+			<br>
+			<form:input path="titulo" type="text" class="text_input"/>
 			<form:errors path="titulo" cssClass="error"/>
 			<br>
-			<br>
 	        <form:label path="descripcion">Descripción:</form:label>
-	        <form:textarea path="descripcion" cols="50"/>
+	        <br>
+	        <form:textarea path="descripcion" placeholder="Escribe una descripcion..."/>
 	        <form:errors path="descripcion" cssClass="error"/>
-			<br>
 			<br>
 	        <form:label path="fechaEvento">Fecha del evento: </form:label>
 	        <form:input path="fechaEvento" type="date"/>
 	        <form:errors path="fechaEvento" cssClass="error"/>
 			<br>
-			<br>
 	        <form:label path="subirFoto">Sube una foto (opcional):</form:label>
-	        <form:input path="subirFoto" type="file" accept="image/png, image/jpg, image/jpeg"/>
-	        <br>
-	        <br>		
+	        <form:input path="subirFoto" type="file" accept="image/png, image/jpg, image/jpeg" id="file"/>
+	        <br>	     
+	        
+	        
+	        
 			<button type="submit">Enviar</button>
-		</form:form>
+		</form:form>   
+		<div id="preview" class="styleImage"></div><!-- Este sera el div donde ira la imagen -->
 	</div>
-	<div> <!-- La finalidad de este div es crear un recuadro izquierdo, donde se mostrara de forma de exposicion la imagen cargada. -->
-		
-	</div>
+	
+	<script src="../js/publicar.js"></script>
 </body>
 </html>
