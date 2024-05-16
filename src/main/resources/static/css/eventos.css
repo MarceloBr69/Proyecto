@@ -44,3 +44,35 @@ a{
 	text-decoration:none;
 	color: white; 
 }
+
+h1{
+	display: flex;
+	margin-top: 5%;
+	margin-left: 20%;
+	font-size: 2.5em;
+	font-style: italic;
+	color:  #414950;
+}
+
+.contenedorPublicaciones{
+	display: flex;
+	flex-direction: column;
+	margin: 2% auto;
+	background-color:  #eff5e7;
+	padding: 2% 4%;
+	width: 70%;
+	height: 20em;
+	border-radius: 3em;
+	overflow: scroll;
+}
+
+footer{
+	margin-top: 2em;
+}
+
+.derechos{
+	display: flex;
+	justify-content: center;
+	padding: 2.5em;
+	color:  #414950;
+}
