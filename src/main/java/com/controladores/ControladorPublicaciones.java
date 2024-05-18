@@ -1,5 +1,7 @@
 package com.controladores;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.modelos.CalculoFechas;
 import com.modelos.LoginUsuario;
 import com.modelos.Publicaciones;
 import com.modelos.Usuario;
@@ -36,10 +39,22 @@ public class ControladorPublicaciones {
 
     @GetMapping("/home")
     public String mostrarHome(Model modelo) {
-    	List<Publicaciones> publicaciones = this.servicioPublicaciones.obtenerTodasLasPublicaciones();
-    	modelo.addAttribute("publicaciones", publicaciones);
+        List<Publicaciones> publicaciones = this.servicioPublicaciones.obtenerUltimas5Publicaciones();
+        List<String> tiemposTranscurridos = new ArrayList<>();
+        List<String> fechasFormateadas = new ArrayList<>();
+
+        for (Publicaciones publicacion : publicaciones) {
+            LocalDateTime fechaPublicacion = CalculoFechas.convertirDateALocalDateTime(publicacion.getFechaCreacion());
+            tiemposTranscurridos.add(CalculoFechas.tiempoTranscurrido(fechaPublicacion));
+            fechasFormateadas.add(CalculoFechas.formatearFecha(publicacion.getFechaEvento()));
+        }   
+
+        modelo.addAttribute("publicaciones", publicaciones);
+        modelo.addAttribute("tiemposTranscurridos", tiemposTranscurridos);
+        modelo.addAttribute("fechasFormateadas", fechasFormateadas);
         return "home.jsp";
     }
+
 
     @GetMapping("/publicar")
     public String mostrarFormulario(Model model) {

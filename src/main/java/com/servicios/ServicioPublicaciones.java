@@ -13,29 +13,32 @@ import com.repositorios.RepositorioPublicaciones;
 
 @Service
 public class ServicioPublicaciones {
-	
-	@Autowired
-	private RepositorioPublicaciones repositorioPublicaciones;
-	
-	public Publicaciones crearPublicacion(Publicaciones publicacionNuevo) {
-		return this.repositorioPublicaciones.save(publicacionNuevo);
-	}
-	
-	public List<Publicaciones> obtenerTodasLasPublicaciones(){
-		return this.repositorioPublicaciones.findAll();
-	}
-	
-	public void eliminarPublicacion(Long id) {
-		this.repositorioPublicaciones.deleteById(id);
-	}
-	
-	public Publicaciones obtenerPublicacion(Long id) {
-		Optional<Publicaciones> publicaciones = this.repositorioPublicaciones.findById(id);
-		return publicaciones.get();
-	}
 
-	public Publicaciones actualizarPublicacion(Publicaciones publicacion) {
-		return this.repositorioPublicaciones.save(publicacion);
-	}
+    @Autowired
+    private RepositorioPublicaciones repositorioPublicaciones;
 
+    public Publicaciones crearPublicacion(Publicaciones publicacionNuevo) {
+        return this.repositorioPublicaciones.save(publicacionNuevo);
+    }
+
+    public List<Publicaciones> obtenerTodasLasPublicaciones() {
+        return this.repositorioPublicaciones.findAll();
+    }
+
+    public List<Publicaciones> obtenerUltimas5Publicaciones() {
+        return this.repositorioPublicaciones.findTop5ByOrderByFechaCreacionDesc();
+    }
+
+    public void eliminarPublicacion(Long id) {
+        this.repositorioPublicaciones.deleteById(id);
+    }
+
+    public Publicaciones obtenerPublicacion(Long id) {
+        Optional<Publicaciones> publicaciones = this.repositorioPublicaciones.findById(id);
+        return publicaciones.get();
+    }
+
+    public Publicaciones actualizarPublicacion(Publicaciones publicacion) {
+        return this.repositorioPublicaciones.save(publicacion);
+    }
 }
