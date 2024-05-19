@@ -53,7 +53,7 @@
 					<label for="imagen">
 						Imagen:
 					</label>
-					<input type="file" name="imagen" id="imagen">
+					<input type="file" name="imagen" id="imagen"	>
 				</div>		
 				<button type="submit">Enviar</button>
 			</form>
