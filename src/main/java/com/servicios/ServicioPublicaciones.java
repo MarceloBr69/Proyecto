@@ -21,8 +21,8 @@ public class ServicioPublicaciones {
         return this.repositorioPublicaciones.save(publicacionNuevo);
     }
 
-    public List<Publicaciones> obtenerTodasLasPublicaciones() {
-        return this.repositorioPublicaciones.findAll();
+    public List<Publicaciones> obtenerTodasLasPublicaciones(){
+        return repositorioPublicaciones.findAllByOrderByFechaCreacionDesc();
     }
 
     public List<Publicaciones> obtenerUltimas5Publicaciones() {
@@ -45,4 +45,11 @@ public class ServicioPublicaciones {
     public void eliminarEvento(Long id) {
     	repositorioPublicaciones.deleteById(id);
     }
+    
+    public Publicaciones obtenerUnoPorId(Long id) {
+    	Optional<Publicaciones> publicacionEncontrada = repositorioPublicaciones.findById(id);
+    	return publicacionEncontrada.get();
+    }
+    
+    
 }

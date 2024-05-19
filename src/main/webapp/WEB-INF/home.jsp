@@ -57,9 +57,11 @@
                                 <td><c:out value="${fechasFormateadas[status.index]}"></c:out></td>
                                 <td><c:out value="${tiemposTranscurridos[status.index]}"></c:out></td>
                                 <td>
-                                    <a href="/home/detalle">Detalle</a>
+					                <form action="/home/detalle/${publicacion.id}" method="GET">
+					                    <button>Detalle</button>
+					                </form>
                                     <c:if test="${idUsuario == publicacion.usuario.id}">
-                                        <form action="/home/eliminar/${publicacion.id}" method="GET">
+                                        <form action="/home/eliminar/${publicacion.id}" method="POST">
                                         	<input type="hidden" name="_method" value="DELETE"/>
                                         	<button>Eliminar</button>
                                         </form>
@@ -74,7 +76,7 @@
     </section>
     <footer>
         <div class="derechos">
-            <p>© 2024 Fellow. Todos los derechos reservados. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
+            <p>© 2024 Fellow. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="../js/home.js"></script>

@@ -30,7 +30,8 @@
 	</nav>
 	
 	<div class="container">
-		<form:form modelAttribute="publicacion" action="/enviarPublicacion" method="POST">
+	
+		<form:form modelAttribute="publicacion" action="/enviarPublicacion" method="POST" enctype="multipart/form-data">
 			<h2>Crea una publicacion!</h2>
 			<br>
 			<form:label path="titulo">Nombre del evento:</form:label>
@@ -47,14 +48,25 @@
 	        <form:input path="fechaEvento" type="date"/>
 	        <form:errors path="fechaEvento" cssClass="error"/>
 			<br>
+			<form action="/enviarPublicacion" method="POST" enctype="multipart/form-data">
+				<div>
+					<label for="imagen">
+						Imagen:
+					</label>
+					<input type="file" name="imagen" id="imagen">
+				</div>		
+				<button type="submit">Enviar</button>
+			</form>
+			<%--
 	        <form:label path="subirFoto">Sube una foto (opcional):</form:label>
-	        <form:input path="subirFoto" type="file" accept="image/png, image/jpg, image/jpeg" id="file"/>
-	        <br>	     
-	        
-	        
-	        
-			<button type="submit">Enviar</button>
+	        <form:input path="subirFoto" type="file" accept="image/png, image/jpg, image/jpeg" id="file" name="file"/>
+	        <br>	       
+	         --%>
+			
 		</form:form>   
+		
+		
+
 		<div id="preview" class="styleImage"></div><!-- Este sera el div donde ira la imagen -->
 	</div>
 	

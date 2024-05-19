@@ -1,7 +1,10 @@
 package com.controladores;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +16,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.modelos.CalculoFechas;
+import com.modelos.Imagen;
 import com.modelos.Publicaciones;
 import com.modelos.Usuario;
+import com.servicios.ServicioImagenes;
 import com.servicios.ServicioPublicaciones;
 import com.servicios.ServicioUsuarios;
 
@@ -31,6 +38,9 @@ public class ControladorPublicaciones {
     
     @Autowired
     private ServicioUsuarios servicioUsuario;
+    
+    @Autowired
+    private ServicioImagenes servicioImagenes;
 
 
     @GetMapping("/home")
@@ -55,10 +65,11 @@ public class ControladorPublicaciones {
     @PostMapping("/enviarPublicacion")
     public String agregarPublicacion(@Valid @ModelAttribute("publicacion") Publicaciones publicacionNuevo,
                                      BindingResult resultado,
-                                     HttpSession sesion) {
+                                     @RequestParam("imagen") MultipartFile imagen,
+                                     HttpSession sesion) throws IOException{
 
         if (resultado.hasErrors()) {
-            return "crearformulario.jsp";
+            return "publicar.jsp";
         }
 
         Long idUsuario = (Long) sesion.getAttribute("idUsuario");
@@ -70,7 +81,17 @@ public class ControladorPublicaciones {
         if (usuarioActual == null) {
             return "redirect:/";
         }
+        
+        String nombreImagen = new Date().toString() + "_" + imagen.getOriginalFilename();
+        String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
+        String rutaCompleta = rutaBase + nombreImagen;
+        
+        Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
+        this.servicioImagenes.guardarImagen(nuevaImagen);
+        
+        imagen.transferTo(new File(rutaCompleta));
 
+        publicacionNuevo.setImagen(nuevaImagen);
         publicacionNuevo.setUsuario(usuarioActual);
         this.servicioPublicaciones.crearPublicacion(publicacionNuevo);
 
@@ -78,10 +99,27 @@ public class ControladorPublicaciones {
 
         return "redirect:/home";
     }
+
+   
     
     @DeleteMapping("/home/eliminar/{id}")
     public String eliminarPublicacion(@PathVariable("id") Long id) {
     	this.servicioPublicaciones.eliminarEvento(id);
     	return "redirect:/home";
     }
+    
+    @GetMapping("/home/detalle/{id}")
+    public String mostrarDetallePublicacion(@PathVariable("id") Long id, Model modelo) {
+        Publicaciones publicacion = servicioPublicaciones.obtenerPublicacion(id);
+        LocalDateTime fechaPublicacion = CalculoFechas.convertirDateALocalDateTime(publicacion.getFechaCreacion());
+        String tiempoTranscurrido = CalculoFechas.tiempoTranscurrido(fechaPublicacion);
+        String fechaFormateada = CalculoFechas.formatearFecha(publicacion.getFechaEvento());
+
+        modelo.addAttribute("publicacion", publicacion);
+        modelo.addAttribute("tiempoTranscurrido", tiempoTranscurrido);
+        modelo.addAttribute("fechaFormateada", fechaFormateada);
+        return "detalleEvento.jsp";
+    }
+    
+    
 }

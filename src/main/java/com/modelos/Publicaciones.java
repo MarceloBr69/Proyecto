@@ -59,9 +59,21 @@ public class Publicaciones {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
-    
 	
-    public Publicaciones(String titulo, String descripcion) {
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="imagen_id")
+	private Imagen imagen;
+
+	
+    public Imagen getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(Imagen imagen) {
+		this.imagen = imagen;
+	}
+
+	public Publicaciones(String titulo, String descripcion) {
 		this.titulo = titulo;
 		this.descripcion = descripcion;
 	}
@@ -132,5 +144,6 @@ public class Publicaciones {
 	public void setFechaEvento(Date fechaEvento) {
 		this.fechaEvento = fechaEvento;
 	}
+
 
 }

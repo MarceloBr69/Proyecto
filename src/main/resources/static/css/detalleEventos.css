@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* estilos barra navegacion */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+    background-color: #82b364;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 5%;
+}
+
+#nameLogo {
+    display: flex;
+    height: 25px;
+}
+
+.contenedorNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60%;
+    padding: 0.2em;
+    margin: 0 2em;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* estilos para la sección de detalles */
+
+.container-detalle {
+    margin-top: 6%; /* Ajustar para dejar espacio para la barra de navegación fija */
+    padding: 2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #414950;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.detalle-publicacion {
+    background-color: #eff5e7;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-publicacion p {
+    margin: 0.5em 0;
+    color: #414950;
+}
+
+.detalle-publicacion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+.detalle-publicacion strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* estilos para el pie de página */
+
+footer {
+    background-color: #82b364;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.derechos {
+    margin: 0 2em;
+}
+
+/* responsive adjustments */
+
+@media (max-width: 768px) {
+    .contenedorNav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .container-detalle {
+        width: 95%;
+        padding: 1em;
+    }
+
+    .detalle-publicacion {
+        padding: 1em;
+    }
+
+    nav {
+        height: auto;
+    }
+}

@@ -1,5 +1,8 @@
 package com.controladores;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +11,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import com.modelos.LoginUsuario;
 import com.modelos.Publicaciones;
 import com.modelos.Usuario;
+import com.servicios.ServicioPublicaciones;
 
 @Controller
 public class ControladorGeneral {
+	
+	@Autowired
+    private ServicioPublicaciones servicioPublicaciones;
 	
     @GetMapping("/")
     public String mostrarInicio(@ModelAttribute("usuario") Usuario usuario,
@@ -25,13 +32,20 @@ public class ControladorGeneral {
     }
     
     @GetMapping("/eventos")
-    public String mostrarVer() {
-    	return "eventos.jsp";
+    public String mostrarEventos(Model modelo) {
+        List<Publicaciones> publicaciones = servicioPublicaciones.obtenerTodasLasPublicaciones();
+        modelo.addAttribute("publicaciones", publicaciones);
+        return "eventos.jsp";
     }
     
     @GetMapping("/perfil")
     public String mostrarPerfil() {
     	return "perfil.jsp";
+    }
+    
+    @GetMapping("/home/detalle")
+    public String mostrarDetalle() {
+    	return "detalleEvento.jsp";
     }
 
 }
