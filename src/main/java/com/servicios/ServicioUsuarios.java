@@ -55,6 +55,7 @@ public class ServicioUsuarios {
 	public Usuario selectPorId(Long id) {
 		return this.repositorioUsuario.getById(id);
 	}
+	
 }
 
 

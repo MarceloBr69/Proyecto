@@ -55,6 +55,24 @@ public class Usuario {
 	@DateTimeFormat(pattern="yyyy-MM-ss")
 	private Date fechaActualizacion;
 	
+	private String descripcion;
+	
+	public List<Publicaciones> getPublicaciones() {
+		return publicaciones;
+	}
+
+	public void setPublicaciones(List<Publicaciones> publicaciones) {
+		this.publicaciones = publicaciones;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
 	@PrePersist
 	protected void onCreate() {
 		this.fechaCreacion = new Date();

@@ -62,8 +62,7 @@ public class ControladorUsuarios {
 		sesion.invalidate();
 		return "redirect:/";
 	}
-
-	
+		
 }
 
 

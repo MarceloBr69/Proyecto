@@ -41,4 +41,8 @@ public class ServicioPublicaciones {
     public Publicaciones actualizarPublicacion(Publicaciones publicacion) {
         return this.repositorioPublicaciones.save(publicacion);
     }
+    
+    public void eliminarEvento(Long id) {
+    	repositorioPublicaciones.deleteById(id);
+    }
 }

@@ -59,8 +59,10 @@
                                 <td>
                                     <a href="#">Detalle</a>
                                     <c:if test="${idUsuario == publicacion.usuario.id}">
-                                        <a href="#">Editar</a>
-                                        <a href="#">Eliminar</a>
+                                        <form action="/home/eliminar/${publicacion.id}" method="POST">
+                                        	<input type="hidden" name="_method" value="DELETE"/>
+                                        	<button>Eliminar</button>
+                                        </form>
                                     </c:if>
                                 </td>
                             </tr>
