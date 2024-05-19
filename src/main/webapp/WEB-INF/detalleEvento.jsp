@@ -27,7 +27,9 @@
         </div>
     </nav>
     <section class="container-detalle">
+    
         <h2>Detalles de la Publicación</h2>
+        
         <div class="detalle-publicacion">
             <p><strong>Título:</strong> <c:out value="${publicacion.titulo}"/></p>
             <p><strong>Descripción:</strong> <c:out value="${publicacion.descripcion}"/></p>
@@ -42,7 +44,7 @@
     </section>
     <footer>
         <div class="derechos">
-            <p>© 2024 Fellow. Todos los derechos reservados. Fellow y todos los títulos y logotipos relacionados son marcas comerciales de Fellow.</p>
+            <p>© 2024 Fellow. Todos los derechos reservados. </p>
         </div>
     </footer>
     <script src="../js/detallePublicacion.js"></script>

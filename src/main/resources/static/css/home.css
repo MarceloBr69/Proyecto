@@ -41,6 +41,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items:center;
 	gap: 60%;
     padding: 0.2em;
     margin: 0 2em;
@@ -97,18 +98,30 @@ footer{/*footer*/
 	height: 20em;
 }
 
+#bienvenida{
+	display: flex;
+	justify-content: center;
+	background-color: #82b364;
+	color: white;
+	padding: 1em;
+	width: 35%;
+	border-radius: 2em;
+	font-weight: bold;
+	font-style: italic;
+}
+
 .container-funcion{/* Contenedor del mapa y actividad reciente */
 	display:flex;
 	justify-content: center;
 	align-items:center;
-	
+	margin: 0 3em;
 	padding-top:5em;
 	padding-bottom:10em;
 } 
 .actividad-reciente{
 	height: 20em;
 	width: 40em;
-	border: solid black 2px;
+	border: solid white 1px;
 	border-radius:2em;
 	color:#414950;
 	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
@@ -120,8 +133,8 @@ footer{/*footer*/
 }
 
 .post-actividad-reciente{
-	border-top: solid green;
-	border-bottom:solid green;
+	border-top: solid #82b364;
+	border-bottom:solid #82b364;
 	padding-left:2em;
 	margin-top:1em;
 	
@@ -140,5 +153,8 @@ th, td {
 	padding-top:1em;
 }
 h2{
-	border-bottom: solid green;
+	border-bottom: solid #82b364;
+	padding: 0.5em;
+	font-style: italic; 
+	font-size: 20px;
 }

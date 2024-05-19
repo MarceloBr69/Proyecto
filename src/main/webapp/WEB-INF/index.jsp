@@ -131,18 +131,18 @@
 					<form:errors path="confirmarContraseña"/>
 		
 					<!--Seleccion de municipalidad-->
-					<form:label path="municipalidadId">Selecciona tu municipalidad</form:label>
+					<form:label path="municipalidadId">Selecciona tu comuna</form:label>
 					<form:select path="municipalidadId">
-						<form:option value="1">Municipalidad de Concepción</form:option>
-						<form:option value="2">Municipalidad de Lota</form:option>
-						<form:option value="3">Municipalidad de Hualpén</form:option>
-						<form:option value="4">Municipalidad de Chiguayante</form:option>
-						<form:option value="5">Municipalidad de San Pedro de la Paz</form:option>
-						<form:option value="6">Municipalidad de Talcahuano</form:option>
-						<form:option value="7">Municipalidad de Penco</form:option>
-						<form:option value="8">Municipalidad de Tomé</form:option>
-						<form:option value="9">Municipalidad de Coronel</form:option>
-						<form:option value="10">Municipalidad de Hualqui</form:option>
+						<form:option value="1">Concepción</form:option>
+						<form:option value="2">Lota</form:option>
+						<form:option value="3">Hualpén</form:option>
+						<form:option value="4">Chiguayante</form:option>
+						<form:option value="5">San Pedro de la Paz</form:option>
+						<form:option value="6">Talcahuano</form:option>
+						<form:option value="7">Penco</form:option>
+						<form:option value="8">Tomé</form:option>
+						<form:option value="9">Coronel</form:option>
+						<form:option value="10">Hualqui</form:option>
 						
 					</form:select>
 					<br>
@@ -171,9 +171,6 @@
 		
 		</div>
 		
-		<footer>
-			<button>¡Haz tu donación!</button>
-			<br>
-		</footer>
+
 	</body>
 </html>

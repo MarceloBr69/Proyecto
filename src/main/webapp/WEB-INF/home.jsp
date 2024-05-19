@@ -28,16 +28,15 @@
     </nav>
     <section class="container-funcion">
         <div>
-            <p>Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
+            <p id="bienvenida">Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
             <br>
             <p>En esta pestaña podrás acceder a distintos apartados, como ver los Post, Crear uno y/o ver tu Perfil.</p>
             <br>
             <div id="map"></div>
-            <br>
-            <p>Actualmente el mapa no se encuentra operando.</p>
+            
         </div>
         <div class="actividad-reciente">
-            <h2>Publicaciones recientes</h2>
+            <h2>Últimos eventos</h2>
             <div class="table-actividad-reciente">
                 <table>
                     <thead>

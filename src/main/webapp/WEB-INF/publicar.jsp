@@ -32,7 +32,7 @@
 	<div class="container">
 	
 		<form:form modelAttribute="publicacion" action="/enviarPublicacion" method="POST" enctype="multipart/form-data">
-			<h2>Crea una publicacion!</h2>
+			<h2>Comparte un evento!</h2>
 			<br>
 			<form:label path="titulo">Nombre del evento:</form:label>
 			<br>
@@ -55,7 +55,7 @@
 					</label>
 					<input type="file" name="imagen" id="imagen"	>
 				</div>		
-				<button type="submit">Enviar</button>
+				<button type="submit">Publicar</button>
 			</form>
 			<%--
 	        <form:label path="subirFoto">Sube una foto (opcional):</form:label>

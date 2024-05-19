@@ -32,6 +32,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items:center;
 	gap: 60%;
     padding: 0.2em;
     margin: 0 2em;
