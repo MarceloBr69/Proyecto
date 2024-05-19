@@ -57,9 +57,9 @@
                                 <td><c:out value="${fechasFormateadas[status.index]}"></c:out></td>
                                 <td><c:out value="${tiemposTranscurridos[status.index]}"></c:out></td>
                                 <td>
-                                    <a href="#">Detalle</a>
+                                    <a href="/home/detalle">Detalle</a>
                                     <c:if test="${idUsuario == publicacion.usuario.id}">
-                                        <form action="/home/eliminar/${publicacion.id}" method="POST">
+                                        <form action="/home/eliminar/${publicacion.id}" method="GET">
                                         	<input type="hidden" name="_method" value="DELETE"/>
                                         	<button>Eliminar</button>
                                         </form>
