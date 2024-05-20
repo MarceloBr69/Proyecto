@@ -10,7 +10,9 @@ body {
 }
 
 /*estilos barra navegacion */
-
+#nameLogo{
+	cursor: pointer;
+}
 nav {
 	display: flex;
 	flex-direction: row;

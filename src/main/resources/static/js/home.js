@@ -9,3 +9,8 @@ function iniciarMapa(){
       map: map
     });
 }
+
+document.getElementById("nameLogo").addEventListener("click", function() {
+  // Cambiar la URL por la de la página a la que quieres redirigir
+  window.location.href = "/home";
+});

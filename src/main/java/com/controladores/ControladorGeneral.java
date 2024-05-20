@@ -13,6 +13,8 @@ import com.modelos.Publicaciones;
 import com.modelos.Usuario;
 import com.servicios.ServicioPublicaciones;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class ControladorGeneral {
 	
@@ -26,7 +28,11 @@ public class ControladorGeneral {
     }
     
     @GetMapping("/publicar")
-    public String mostrarFormularioPublicacion(Model modelo) {
+    public String mostrarFormularioPublicacion(Model modelo, HttpSession sesion) {
+    	Long idUsuario = (Long) sesion.getAttribute("idUsuario");
+        if (idUsuario == null) {
+            return "redirect:/";
+        }
         modelo.addAttribute("publicacion", new Publicaciones());
         return "publicar.jsp";
     }

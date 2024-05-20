@@ -17,7 +17,7 @@
 			<div class="contenedorNav">
 		
 			<div>
-				  <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
+				  <a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/></a>
 			</div>
 			
 	        <div>

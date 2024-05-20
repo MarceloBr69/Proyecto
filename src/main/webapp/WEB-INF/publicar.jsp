@@ -15,7 +15,7 @@
 		<div class="contenedorNav">
 			<div>
 				<!-- Logo de la empresa -->
-				<img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto" />
+				<a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/></a>
 			</div>
 
 			<div>
@@ -69,10 +69,11 @@
 					name="imagen" id="imagen">
 			</div>
 			<button type="submit">Cargar</button>
+			<div id="preview" class="styleImage"></div>
 		</form>
 
 
-		<div id="preview" class="styleImage"></div>
+
 		<!-- Este sera el div donde ira la imagen -->
 	</div>
 

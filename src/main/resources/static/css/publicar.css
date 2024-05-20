@@ -12,6 +12,9 @@ body{ /*Body*/
     background-image: url(../fotos/background2.png);
     background-size: cover;
 }
+#nameLogo{
+	cursor: pointer;
+}
 .contenedorNav {/*Contenedor principal de la barra de navegacion*/
 	display: flex;
 	flex-direction: row;
@@ -103,6 +106,10 @@ textarea, .text_input{/*TextArea e Input titulo*/
 	border: solid white 2px;
 	border-radius:2em;
 	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+#preview{
+	padding-top:2em;
 }
 	
 

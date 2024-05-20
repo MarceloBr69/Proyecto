@@ -9,6 +9,12 @@ h1 {
 	color: white;
 	margin-left: 2em;
 }
+#nameLogo{
+	cursor: pointer;
+}
+
+
+
 
 body {
 	background-color: white;
