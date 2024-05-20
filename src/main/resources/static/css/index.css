@@ -157,7 +157,14 @@ button{
 	font-weight: 600;
 	cursor: pointer;
 }
-
+.boton_ver{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+.ver_publicaciones{
+	width:15em;
+}
 a {
 	text-decoration:none;
 	color: white; 

@@ -28,7 +28,7 @@
     </nav>
     <section class="container-funcion">
         <div>
-            <p id="bienvenida">Bienvenido a Fellow, <c:out value="${nombre}"></c:out>!</p>
+            <p id="bienvenida">Bienvenido a Fellow <c:out value="${nombre}"></c:out>!</p>
             <br>
             <p>En esta pestaña podrás acceder a distintos apartados, como ver los Post, Crear uno y/o ver tu Perfil.</p>
             <br>

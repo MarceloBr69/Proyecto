@@ -31,7 +31,7 @@ public class ControladorGeneral {
     public String mostrarFormularioPublicacion(Model modelo, HttpSession sesion) {
     	Long idUsuario = (Long) sesion.getAttribute("idUsuario");
         if (idUsuario == null) {
-            return "redirect:/";
+            return "redirect:/#login";
         }
         modelo.addAttribute("publicacion", new Publicaciones());
         return "publicar.jsp";

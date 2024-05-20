@@ -91,6 +91,10 @@
 			<p>
 				¡Conviértete en un Good Fellow!
 			</p>
+			<form action="/home" class="boton_ver">
+				<button class="ver_publicaciones">Ver Publicaciones</button>
+			</form>
+			
 		</div>
 	
 		<!--Aca colocar logo-->
