@@ -1,38 +1,40 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 	font-size: 17px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1{
-	color: white; 
-	margin-left:2em;
+
+h1 {
+	color: white;
+	margin-left: 2em;
 }
+
 body {
 	background-color: white;
 }
 
-h3{
+h3 {
 	display: flex;
-    color: white;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+	color: white;
+	display: flex;
+	justify-content: end;
+	align-items: center;
 }
 
 nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-    padding: 0.5em;
-	background-color:#82b364;
+	padding: 0.5em;
+	background-color: #82b364;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	height: 5%;
 }
 
-#nameLogo{
+#nameLogo {
 	display: flex;
 	height: 25px;
 }
@@ -41,11 +43,11 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items:center;
+	align-items: center;
 	gap: 60%;
-    padding: 0.2em;
-    margin: 0 2em;
-    width: 100%;
+	padding: 0.2em;
+	margin: 0 2em;
+	width: 100%;
 }
 
 ul {
@@ -54,51 +56,50 @@ ul {
 	gap: 3em;
 	list-style: none;
 }
-	
-nav a{
-	text-decoration:none;
-	color: white; 
-}
-	
-input{ /*Input del boton de busqueda*/
-    padding: 10px;
-    padding-right: 20px;
-    border-radius: 5px;
-    border: 0;
 
-    width: 20em;
-    height: 2em;
-    outline: none;
-    font-size: 1rem;
+nav a {
+	text-decoration: none;
+	color: white;
 }
 
-
-#map{ /*Api mapa*/
-	height:500px;
-	width:100%;
+input { /*Input del boton de busqueda*/
+	padding: 10px;
+	padding-right: 20px;
+	border-radius: 5px;
+	border: 0;
+	width: 20em;
+	height: 2em;
+	outline: none;
+	font-size: 1rem;
 }
 
-footer{/*footer*/
-	background-color:#414950;
-	height:7.5em;
-	color:white;
+#map { /*Api mapa*/
+	height: 500px;
+	width: 100%;
 }
-.derechos{ /*Div de parrafo derecho*/
+
+footer { /*footer*/
+	background-color: #414950;
+	height: 7.5em;
+	color: white;
+}
+
+.derechos { /*Div de parrafo derecho*/
 	display: flex;
-	padding-top:20px;
+	padding-top: 20px;
 	justify-content: center;
-	align-items:center;
+	align-items: center;
 }
-.bienvenida{/*div donde se le da la bienvenida al usuario*/
-	display:flex;
-	flex-direction:column;
+
+.bienvenida { /*div donde se le da la bienvenida al usuario*/
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items:center;
-	
+	align-items: center;
 	height: 20em;
 }
 
-#bienvenida{
+#bienvenida {
 	display: flex;
 	justify-content: center;
 	background-color: #82b364;
@@ -110,51 +111,51 @@ footer{/*footer*/
 	font-style: italic;
 }
 
-.container-funcion{/* Contenedor del mapa y actividad reciente */
-	display:flex;
+.container-funcion { /* Contenedor del mapa y actividad reciente */
+	display: flex;
 	justify-content: center;
-	align-items:center;
+	align-items: center;
 	margin: 0 3em;
-	padding-top:5em;
-	padding-bottom:10em;
-} 
-.actividad-reciente{
-	height: 20em;
-	width: 40em;
-	border: solid white 1px;
-	border-radius:2em;
-	color:#414950;
-	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
-	
-	margin-left: 4em;
-	padding:2em;
-	display:inline-block;
-	
+	padding-top: 5em;
+	padding-bottom: 10em;
 }
 
-.post-actividad-reciente{
+.actividad-reciente {
+	height: 20em;
+	width: 50em;
+	border: solid white 1px;
+	border-radius: 2em;
+	color: #414950;
+	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
+	margin-left: 4em;
+	padding: 2em;
+	display: inline-block;
+}
+
+.post-actividad-reciente {
 	border-top: solid #82b364;
-	border-bottom:solid #82b364;
-	padding-left:2em;
-	margin-top:1em;
-	
+	border-bottom: solid #82b364;
+	padding-left: 2em;
+	margin-top: 1em;
 	width: 90%;
 }
 
 table {
-   width: 100%;
+	width: 100%;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: center;
 }
-th, td {
-   width: 25%;
-}
-.table-actividad-reciente{
+
+.table-actividad-reciente {
 	display: flex;
-	justify-content:center;
-	padding-top:1em;
+	justify-content: center;
+	padding-top: 1em;
 }
-h2{
+
+h2 {
 	border-bottom: solid #82b364;
 	padding: 0.5em;
-	font-style: italic; 
+	font-style: italic;
 	font-size: 20px;
 }

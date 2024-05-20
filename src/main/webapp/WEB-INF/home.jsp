@@ -51,7 +51,7 @@
                     <tbody>
                         <c:forEach var="publicacion" items="${publicaciones}" varStatus="status">
                             <tr>
-                                <td><c:out value="${publicacion.titulo}"></c:out></td>
+                                <td><a href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"></c:out></a></td>
                                 <td><c:out value="${publicacion.usuario.nombre}"></c:out></td>
                                 <td><c:out value="${fechasFormateadas[status.index]}"></c:out></td>
                                 <td><c:out value="${tiemposTranscurridos[status.index]}"></c:out></td>

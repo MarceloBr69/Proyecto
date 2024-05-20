@@ -93,6 +93,17 @@ textarea, .text_input{/*TextArea e Input titulo*/
 	width:90%;
 	padding:2%;
 }
+.imagen_post{
+	margin-top: 1em;
+	padding-left:5.5em;
+	padding-right:5.5em;
+	padding-top:3em;
+	padding-bottom:3em;
+	background-color: white;
+	border: solid white 2px;
+	border-radius:2em;
+	box-shadow: 0px 0px 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
 	
 
 	

@@ -95,7 +95,7 @@ public class ControladorPublicaciones {
     		return "redirect:/home";
     	}
     	String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
-    	String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
+    	String rutaBase = "\\Users\\Marcelo\\Desktop\\imagenes proyecto";
     	String rutaCompleta = rutaBase + nombreImagen;
     	
     	Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
