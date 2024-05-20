@@ -64,14 +64,15 @@ public class ControladorPublicaciones {
     
     @PostMapping("/enviarPublicacion")
     public String agregarPublicacion(@Valid @ModelAttribute("publicacion") Publicaciones publicacionNuevo,
-                                     BindingResult resultado,
-                                     @RequestParam("imagen") MultipartFile imagen,
-                                     HttpSession sesion) throws IOException{
+                                     BindingResult resultadoPublicacion,
+                                     HttpSession sesion) {
 
-        if (resultado.hasErrors()) {
+        if (resultadoPublicacion.hasErrors()) {
             return "publicar.jsp";
         }
+        
 
+        
         Long idUsuario = (Long) sesion.getAttribute("idUsuario");
         if (idUsuario == null) {
             return "redirect:/";
@@ -82,25 +83,29 @@ public class ControladorPublicaciones {
             return "redirect:/";
         }
         
-        String nombreImagen = new Date().toString() + "_" + imagen.getOriginalFilename();
-        String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
-        String rutaCompleta = rutaBase + nombreImagen;
-        
-        Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
-        this.servicioImagenes.guardarImagen(nuevaImagen);
-        
-        imagen.transferTo(new File(rutaCompleta));
-
-        publicacionNuevo.setImagen(nuevaImagen);
         publicacionNuevo.setUsuario(usuarioActual);
         this.servicioPublicaciones.crearPublicacion(publicacionNuevo);
 
-        System.out.println("Se recibió una nueva publicación: " + publicacionNuevo.getTitulo());
-
         return "redirect:/home";
     }
-
    
+    @PostMapping("/cargar/imagen")
+    public String procesaNuevaImagen(@RequestParam("imagen") MultipartFile archivo) throws IOException{
+    	if(archivo.isEmpty()) {
+    		return "redirect:/home";
+    	}
+    	String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
+    	String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
+    	String rutaCompleta = rutaBase + nombreImagen;
+    	
+    	Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
+    	this.servicioImagenes.guardarImagen(nuevaImagen);
+    	
+    	archivo.transferTo(new File(rutaCompleta));
+    	
+    	return "redirect:/home";
+    	
+    }
     
     @DeleteMapping("/home/eliminar/{id}")
     public String eliminarPublicacion(@PathVariable("id") Long id) {

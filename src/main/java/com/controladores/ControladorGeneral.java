@@ -26,9 +26,9 @@ public class ControladorGeneral {
     }
     
     @GetMapping("/publicar")
-    public String mostrarFormulario(Model model) {
-        model.addAttribute("publicacion", new Publicaciones());
-        return "publicar.jsp"; 
+    public String mostrarFormularioPublicacion(Model modelo) {
+        modelo.addAttribute("publicacion", new Publicaciones());
+        return "publicar.jsp";
     }
     
     @GetMapping("/eventos")
