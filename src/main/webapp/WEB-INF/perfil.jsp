@@ -100,7 +100,10 @@
     <div class="publicaciones">
         <c:forEach var="publicacion" items="${publicaciones}">
             <div class="publicacion">
-                <h3><c:out value="${publicacion.titulo}"/></h3>
+                <h3>
+	                <a href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"/></a>
+	                
+                </h3>
 				<p><c:out value="${publicacion.descripcion}"/></p>
                 <p>Fecha: <c:out value="${publicacion.fechaEvento}"/></p>
             </div>
