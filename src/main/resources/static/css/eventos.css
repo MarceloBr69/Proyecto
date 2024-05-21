@@ -46,14 +46,13 @@ a{
 	color: white; 
 }
 
-/*contenido perfil*/
+/*contenido*/
 
 h1{
 	display: flex;
 	margin-top: 6%;
 	margin-left: 20%;
 	font-size: 2.5em;
-	font-style: italic;
 	color:  #414950;
 }
 
@@ -67,6 +66,19 @@ h1{
 	height: 20em;
 	border-radius: 3em;
 	overflow: scroll;
+}
+
+.contenedorIndividual{
+	display:flex;
+	flex-direction:column;
+	margin: 0.5em 0;
+}
+
+.tituloPublicacion{
+	color:#414950;
+	font-size: 20px;
+	margin-bottom: 0.5em;
+	font-style: italic;
 }
 
 

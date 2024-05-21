@@ -32,7 +32,7 @@
     <div class="contenedorPublicaciones">
         <c:forEach var="publicacion" items="${publicaciones}">
             <div class="contenedorIndividual">
-                <h3><a href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"/></a></h3>
+                <h3><a class="tituloPublicacion" href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"/></a></h3>
                 <p><c:out value="${fn:substring(publicacion.descripcion, 0, 100)}"/>...</p>
                 <div>
                     <c:if test="${publicacion.imagen != null}">
