@@ -36,9 +36,9 @@
             <p><strong>Publicado por:</strong> <c:out value="${publicacion.usuario.nombre}"/></p>
             <p><strong>Fecha del evento:</strong> <c:out value="${fechaFormateada}"/></p>
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
-            <c:if test="${publicacion.subirFoto != null}">
+            <c:if test="${publicacion.archivo != null}">
                 <p><strong>Foto:</strong></p>
-                <img src="/fotos/${publicacion.subirFoto}" alt="Foto de la publicación"/>
+                <img src="/fotos/${publicacion.archivo}" alt="Foto de la publicación"/>
             </c:if>
         </div>
     </section>
