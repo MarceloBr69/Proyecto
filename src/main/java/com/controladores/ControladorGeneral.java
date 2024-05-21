@@ -83,6 +83,10 @@ public class ControladorGeneral {
     public String mostrarPerfilDeOtroUsuario(@PathVariable("usuario_id") Long id, Model model) {
     	Usuario usuarioId = this.servicioUsuarios.selectPorId(id);
     	model.addAttribute("usuarioId", usuarioId);
+    	
+    	List<Publicaciones> publicaciones = servicioPublicaciones.obtenerPublicacionesPorUsuario(id);
+        model.addAttribute("publicaciones", publicaciones);
+        
     	return "verperfil.jsp";
     }
     

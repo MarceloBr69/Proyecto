@@ -47,7 +47,7 @@
 	        <h3>Descripción</h3>
 	        
 	        <div id="descripcion">
-	            <p><c:out value="${descripcion}"><!-- Aquí va la descripción --></c:out></p>
+	            <p><c:out value="${descripcion}"></c:out></p>
 	        </div>
 	        <button onclick="window.location.href='/editarPerfil'">Editar Perfil</button>
 	    </div>

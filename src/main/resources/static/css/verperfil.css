@@ -46,7 +46,7 @@ ul {
 	list-style: none;
 }
 	
-a{
+nav a{
 	text-decoration:none;
 	color: white; 
 }
@@ -121,11 +121,19 @@ input{
 
 .publicaciones{
 	background-color: #eff5e7;
-	color:  #414950;
+	color: #414950;
 	overflow: scroll;
 	width: 100%;
 	height: 8em;
 	margin-bottom: 3em;
+}
+
+.publicacion{
+	display: flex;
+	flex-direction: column;
+	margin: 0 2em;
+	margin-bottom: 0.5em;
+	padding: 0.2em;
 }
 
 #actividad{
@@ -133,6 +141,3 @@ input{
 	color: #414950;
 	margin: 1em;
 }
-
-
-
