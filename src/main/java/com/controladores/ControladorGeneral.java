@@ -70,6 +70,7 @@ public class ControladorGeneral {
         return "perfil.jsp";
     }
     
+
     @GetMapping("/home/detalle")
     public String mostrarDetalle() {
     	return "detalleEvento.jsp";

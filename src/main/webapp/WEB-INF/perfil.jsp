@@ -9,46 +9,7 @@
 	    <meta charset="UTF-8">
 	    <title><c:out value="${nombre}"/> <c:out value="${apellidos}"/> / Fellow </title>
 	    <link rel="stylesheet" href="/css/perfil.css">
-	    <script>
-	        function enableEditing() {
-	            var desc = document.getElementById("descripcion");
-	            var editBtn = document.getElementById("editBtn");
-	            var saveBtn = document.getElementById("saveBtn");
-	
-	            desc.contentEditable = true;
-	            desc.focus();
-	            editBtn.style.display = "none";
-	            saveBtn.style.display = "inline";
-	        }
-	
-	        function saveDescription() {
-	            var desc = document.getElementById("descripcion");
-	            var editBtn = document.getElementById("editBtn");
-	            var saveBtn = document.getElementById("saveBtn");
-	
-	            // Here you would typically make an AJAX call to save the data to the server.
-	            // For simplicity, we'll just make it non-editable and switch buttons.
-	
-	            desc.contentEditable = false;
-	            editBtn.style.display = "inline";
-	            saveBtn.style.display = "none";
-	
-	            // Example AJAX call (using fetch API):
-	            fetch('/saveDescription', {
-	                method: 'POST',
-	                headers: {
-	                    'Content-Type': 'application/json'
-	                },
-	                body: JSON.stringify({ description: desc.innerText })
-	            }).then(response => {
-	                if (response.ok) {
-	                    console.log("Description saved successfully");
-	                } else {
-	                    console.error("Failed to save description");
-	                }
-	            }).catch(error => console.error('Error:', error));
-	        }
-	    </script>
+
 	</head>
 	<body>
 	
@@ -73,9 +34,11 @@
 	</nav>
 		
 	<div class="top">
-	    <div class="fotoPerfil">
-	        <!-- aqui va a ir la foto de perfil -->
-	    </div>
+	<div class="fotoPerfil">
+	    <c:if test="${usuario.imagenPerfil != null}">
+	        <img src="${usuario.imagenPerfil.rutaImagen}" alt="Foto de Perfil"/>
+	    </c:if>
+	</div>
 	    <div class="seccionTop">
 	        <div class="nombreCompleto">
 	            <h1><c:out value="${nombre}"/> <c:out value="${apellidos}"/> </h1>
@@ -84,32 +47,31 @@
 	        <h3>Descripción</h3>
 	        
 	        <div id="descripcion">
-	            <c:out value="${descripcion}"/>
+	            <p><c:out value="${descripcion}">Aquí va la descripción</c:out></p>
 	        </div>
-	        <button id="editBtn" onclick="enableEditing()">Editar</button>
-	        <button id="saveBtn" style="display: none;" onclick="saveDescription()">Guardar</button>
+	        <button onclick="window.location.href='/editarPerfil'">Editar Perfil</button>
 	    </div>
-</div>
-			
+	</div>
+				
 		
 	
 	
-<div class="historialActividad">
-    <h2 id="actividad">Actividad Reciente</h2>
-    
-    <div class="publicaciones">
-        <c:forEach var="publicacion" items="${publicaciones}">
-            <div class="publicacion">
-                <h3>
-	                <a href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"/></a>
-	                
-                </h3>
-				<p><c:out value="${publicacion.descripcion}"/></p>
-                <p>Fecha: <c:out value="${publicacion.fechaEvento}"/></p>
-            </div>
-        </c:forEach>
-    </div>
-</div>
+	<div class="historialActividad">
+	    <h2 id="actividad">Actividad Reciente</h2>
+	    
+	    <div class="publicaciones">
+	        <c:forEach var="publicacion" items="${publicaciones}">
+	            <div class="publicacion">
+	                <h3>
+		                <a href="/home/detalle/${publicacion.id}"><c:out value="${publicacion.titulo}"/></a>
+		                
+	                </h3>
+					<p><c:out value="${publicacion.descripcion}"/></p>
+	                <p>Fecha: <c:out value="${publicacion.fechaEvento}"/></p>
+	            </div>
+	        </c:forEach>
+	    </div>
+	</div>
     
 	    
 
@@ -117,3 +79,4 @@
 		
 	    
 	</body>
+	</html>

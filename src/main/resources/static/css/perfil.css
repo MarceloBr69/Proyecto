@@ -48,7 +48,7 @@ ul {
 	list-style: none;
 }
 	
-a{
+nav a{
 	text-decoration:none;
 	color: white; 
 }
@@ -75,6 +75,18 @@ a{
 	margin: 1em;
 	margin-top: 2em;
 	border-radius: 7em;
+	overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff5e7;
+}
+
+
+.fotoPerfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegurará que la imagen se ajuste dentro del contenedor */
+    border-radius: 50%; /* Esto asegurará que la imagen también sea redonda */
 }
 
 .seccionTop{/*contenedor dentro del contenedorsuperior*/
@@ -143,6 +155,8 @@ input{
 	color: #414950;
 	margin: 1em;
 }
+
+
 
 
 

@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,6 +12,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -21,150 +24,183 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table(name="usuarios")
 public class Usuario {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
-	
-	@Size(min=2, message="Proporciona tu nombre")
-	private String nombre;
-	
-	@Size(min=2, message="Proporciona ambos apellidos")
-	private String apellidos;
-	
-	@Size(min=7, message="Proporciona tu RUT")
-	private String rut;
-	
-	@Size(min=2, message="Proporciona tu correo")
-	private String correo;
-	
-	private String contraseña;
-	
-	@OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
-	private List<Publicaciones> publicaciones;
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long id;
+    
+    @Size(min=2, message="Proporciona tu nombre")
+    private String nombre;
+    
+    @Size(min=2, message="Proporciona ambos apellidos")
+    private String apellidos;
+    
+    @Size(min=7, message="Proporciona tu RUT")
+    private String rut;
+    
+    @Size(min=2, message="Proporciona tu correo")
+    private String correo;
+    
+    private String contraseña;
+    
+    @OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
+    private List<Publicaciones> publicaciones;
 
-	@Transient
-	private String confirmarContraseña;
-	
-	private Long municipalidadId;
-	
-	@Column(updatable=false)
-	@DateTimeFormat(pattern="yyyy-MM-ss")
-	private Date fechaCreacion;
-	
-	@DateTimeFormat(pattern="yyyy-MM-ss")
-	private Date fechaActualizacion;
-	
-	private String descripcion;
-	
-	public List<Publicaciones> getPublicaciones() {
-		return publicaciones;
-	}
+    @Transient
+    private String confirmarContraseña;
+    
+    private Long municipalidadId;
+    
+    @Column(updatable=false)
+    @DateTimeFormat(pattern="yyyy-MM-ss")
+    private Date fechaCreacion;
+    
+    @DateTimeFormat(pattern="yyyy-MM-ss")
+    private Date fechaActualizacion;
+    
+    private String descripcion;
+    
+    @Transient
+    private String fotoPerfil;
 
-	public void setPublicaciones(List<Publicaciones> publicaciones) {
-		this.publicaciones = publicaciones;
-	}
+    @Transient
+    private MultipartFile fotoPerfilArchivo;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "imagen_perfil_id")
+    private Imagen imagenPerfil;
+    
+    // Getters and setters
+    
+    public Imagen getImagenPerfil() {
+        return imagenPerfil;
+    }
 
-	public String getDescripcion() {
-		return descripcion;
-	}
+    public void setImagenPerfil(Imagen imagenPerfil) {
+        this.imagenPerfil = imagenPerfil;
+    }
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
+    public List<Publicaciones> getPublicaciones() {
+        return publicaciones;
+    }
 
-	@PrePersist
-	protected void onCreate() {
-		this.fechaCreacion = new Date();
-	}
-	
-	@PreUpdate
-	protected void onUpdate() {
-		this.fechaActualizacion = new Date();
-	}
+    public void setPublicaciones(List<Publicaciones> publicaciones) {
+        this.publicaciones = publicaciones;
+    }
 
-	public Usuario() {}
+    public String getDescripcion() {
+        return descripcion;
+    }
 
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
-	public long getId() {
-		return id;
-	}
+    @PrePersist
+    protected void onCreate() {
+        this.fechaCreacion = new Date();
+    }
+    
+    @PreUpdate
+    protected void onUpdate() {
+        this.fechaActualizacion = new Date();
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public Usuario() {}
 
-	public String getNombre() {
-		return nombre;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getApellidos() {
-		return apellidos;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public String getRut() {
-		return rut;
-	}
+    public String getApellidos() {
+        return apellidos;
+    }
 
-	public void setRut(String rut) {
-		this.rut = rut;
-	}
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
 
-	public String getCorreo() {
-		return correo;
-	}
+    public String getRut() {
+        return rut;
+    }
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
 
-	public String getContraseña() {
-		return contraseña;
-	}
+    public String getCorreo() {
+        return correo;
+    }
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
-	}
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
 
-	public String getConfirmarContraseña() {
-		return confirmarContraseña;
-	}
+    public String getContraseña() {
+        return contraseña;
+    }
 
-	public void setConfirmarContraseña(String confirmarContraseña) {
-		this.confirmarContraseña = confirmarContraseña;
-	}
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
 
-	public Long getMunicipalidadId() {
-		return municipalidadId;
-	}
+    public String getConfirmarContraseña() {
+        return confirmarContraseña;
+    }
 
-	public void setMunicipalidadId(Long municipalidadId) {
-		this.municipalidadId = municipalidadId;
-	}
+    public void setConfirmarContraseña(String confirmarContraseña) {
+        this.confirmarContraseña = confirmarContraseña;
+    }
 
-	public Date getFechaCreacion() {
-		return fechaCreacion;
-	}
+    public Long getMunicipalidadId() {
+        return municipalidadId;
+    }
 
-	public void setFechaCreacion(Date fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-	}
+    public void setMunicipalidadId(Long municipalidadId) {
+        this.municipalidadId = municipalidadId;
+    }
 
-	public Date getFechaActualizacion() {
-		return fechaActualizacion;
-	}
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
 
-	public void setFechaActualizacion(Date fechaActualizacion) {
-		this.fechaActualizacion = fechaActualizacion;
-	}
-	
-	
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public Date getFechaActualizacion() {
+        return fechaActualizacion;
+    }
+
+    public void setFechaActualizacion(Date fechaActualizacion) {
+        this.fechaActualizacion = fechaActualizacion;
+    }
+
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
+    }
+
+    public MultipartFile getFotoPerfilArchivo() {
+        return fotoPerfilArchivo;
+    }
+
+    public void setFotoPerfilArchivo(MultipartFile fotoPerfilArchivo) {
+        this.fotoPerfilArchivo = fotoPerfilArchivo;
+    }
 }

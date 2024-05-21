@@ -56,7 +56,12 @@ public class ServicioUsuarios {
 		return this.repositorioUsuario.getById(id);
 	}
 	
+	public void actualizarUsuario(Usuario usuario) {
+	    	repositorioUsuario.save(usuario);
+    }  
+	
 }
+
 
 
 

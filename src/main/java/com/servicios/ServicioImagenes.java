@@ -1,6 +1,7 @@
 package com.servicios;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,4 +26,8 @@ public class ServicioImagenes {
 	public Imagen guardarImagen(Imagen nuevaImagen) {
 		return this.repositorioImagenes.save(nuevaImagen);
 	}
+    public Imagen obtenerImagenPorId(Long id) {
+        Optional<Imagen> imagenOptional = repositorioImagenes.findById(id);
+        return imagenOptional.orElse(null);
+    }
 }
