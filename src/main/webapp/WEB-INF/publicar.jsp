@@ -62,51 +62,6 @@
         </form:form>
 
     </div>
-	
-	
-	
-	
-	<%--
-		<form:form modelAttribute="publicacion" action="/enviarPublicacion"
-			method="POST" enctype="multipart/form-data">
-			<h2>Comparte un evento!</h2>
-			<br>
-			<form:label path="titulo">Nombre del evento:</form:label>
-			<br>
-			<form:input path="titulo" type="text" class="text_input" />
-			<form:errors path="titulo" cssClass="error" />
-			<br>
-			<form:label path="descripcion">Descripción:</form:label>
-			<br>
-			<form:textarea path="descripcion"
-				placeholder="Escribe una descripcion..." />
-			<form:errors path="descripcion" cssClass="error" />
-			<br>
-			<form:label path="fechaEvento">Fecha del evento: </form:label>
-			<form:input path="fechaEvento" type="date" />
-			<form:errors path="fechaEvento" cssClass="error" />
-			<br>
-			<br>
-			<%--
-            <form:label path="imagen">Imagen:</form:label>
-            <form:input path="imagen" type="file" name="imagen" id="imagen"></form:input>
-            <form:errors path="imagen" cssClass="error"/> 
-             
-			<br>
-			<form:button type="submit">Publicar</form:button>
-		</form:form>
-
-		<form action="/cargar/imagen" method="POST"
-			enctype="multipart/form-data" class="imagen_post">
-			<div>
-				<label for="imagen"> Nueva imagen: </label> <input type="file"
-					name="imagen" id="imagen">
-			</div>
-			<button type="submit">Cargar</button>
-		</form>
- 		
- 		--%>
-
 		
 		<div id="preview" class="styleImage"></div>
 		<!-- Este sera el div donde ira la imagen -->

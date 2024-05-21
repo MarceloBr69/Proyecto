@@ -90,80 +90,21 @@ public class ControladorPublicaciones {
         }
 
         if (!archivo.isEmpty()) {
-        	System.out.println("1");
             String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
-            System.out.println("2");
             String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
-            System.out.println("3");
             String rutaCompleta = rutaBase + nombreImagen;
-            System.out.println("4");
             
             Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
-            System.out.println("5");
             this.servicioImagenes.guardarImagen(nuevaImagen);
-            System.out.println("6");
             archivo.transferTo(new File(rutaCompleta));
-            System.out.println("7");
             publicacionNuevo.setImagen(nuevaImagen);
         }
-        System.out.println("8");
-        publicacionNuevo.setUsuario(usuarioActual);
-        System.out.println("9");
-        this.servicioPublicaciones.crearPublicacion(publicacionNuevo);
-
-        return "redirect:/home";
-    }
-
-    
-    /*
-    
-    @PostMapping("/enviarPublicacion")
-    public String agregarPublicacion(@Valid @ModelAttribute("publicacion") Publicaciones publicacionNuevo,
-                                     BindingResult resultadoPublicacion,
-                                     HttpSession sesion) {
-
-        if (resultadoPublicacion.hasErrors()) {
-            return "publicar.jsp";
-        }
-        
-
-        
-        Long idUsuario = (Long) sesion.getAttribute("idUsuario");
-        if (idUsuario == null) {
-            return "redirect:/";
-        }
-
-        Usuario usuarioActual = this.servicioUsuario.selectPorId(idUsuario);
-        if (usuarioActual == null) {
-            return "redirect:/";
-        }
-        
         publicacionNuevo.setUsuario(usuarioActual);
         this.servicioPublicaciones.crearPublicacion(publicacionNuevo);
 
         return "redirect:/home";
     }
-   
-    @PostMapping("/cargar/imagen")
-    public String procesaNuevaImagen(@RequestParam("imagen") MultipartFile archivo) throws IOException{
-    	if(archivo.isEmpty()) {
-    		return "redirect:/home";
-    	}
-    	String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
-    	String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
-    	String rutaCompleta = rutaBase + nombreImagen;
-    	
-    	Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
-    	this.servicioImagenes.guardarImagen(nuevaImagen);
-    	
-    	archivo.transferTo(new File(rutaCompleta));
-    	
-    	return "redirect:/home";
-    	
-    }
-    
-    */
-    
+
     @DeleteMapping("/home/eliminar/{id}")
     public String eliminarPublicacion(@PathVariable("id") Long id) {
     	this.servicioPublicaciones.eliminarEvento(id);
