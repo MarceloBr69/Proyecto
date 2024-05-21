@@ -94,34 +94,20 @@
 		
 	
 	
-		<div class="historialActividad">
-		
-		  <h2 id="actividad">Actividad Reciente</h2>
-		  
-		 <div class="publicaciones">
-		 	<p><c:out value="${descripcion}"/>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
-			 asperiores enim, itaque veniam nulla accusantium minus 
-			 tenetur commodi ut!</p>
-			 
-			 	<p><c:out value="${descripcion}"/>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
-			 asperiores enim, itaque veniam nulla accusantium minus 
-			 tenetur commodi ut!</p>
-			 
-			 	<p><c:out value="${descripcion}"/>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
-			 asperiores enim, itaque veniam nulla accusantium minus 
-			 tenetur commodi ut!</p>
-			 
-			 	<p><c:out value="${descripcion}"/>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
-			 asperiores enim, itaque veniam nulla accusantium minus 
-			 tenetur commodi ut!</p>
-			
-		 </div> 
-
-		</div>
+<div class="historialActividad">
+    <h2 id="actividad">Actividad Reciente</h2>
+    
+    <div class="publicaciones">
+        <c:forEach var="publicacion" items="${publicaciones}">
+            <div class="publicacion">
+                <h3><c:out value="${publicacion.titulo}"/></h3>
+				<p><c:out value="${publicacion.descripcion}"/></p>
+                <p>Fecha: <c:out value="${publicacion.fechaEvento}"/></p>
+            </div>
+        </c:forEach>
+    </div>
+</div>
+    
 	    
 
 	

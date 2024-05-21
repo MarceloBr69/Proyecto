@@ -51,5 +51,9 @@ public class ServicioPublicaciones {
     	return publicacionEncontrada.get();
     }
     
+    public List<Publicaciones> obtenerPublicacionesPorUsuario(Long idUsuario) {
+        return repositorioPublicaciones.findByUsuarioId(idUsuario);
+    }
+    
     
 }

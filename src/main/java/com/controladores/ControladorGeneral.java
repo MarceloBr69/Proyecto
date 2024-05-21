@@ -12,6 +12,7 @@ import com.modelos.LoginUsuario;
 import com.modelos.Publicaciones;
 import com.modelos.Usuario;
 import com.servicios.ServicioPublicaciones;
+import com.servicios.ServicioUsuarios;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -20,6 +21,9 @@ public class ControladorGeneral {
 	
 	@Autowired
     private ServicioPublicaciones servicioPublicaciones;
+	
+	@Autowired
+	private ServicioUsuarios servicioUsuarios;
 	
     @GetMapping("/")
     public String mostrarInicio(@ModelAttribute("usuario") Usuario usuario,
@@ -45,8 +49,25 @@ public class ControladorGeneral {
     }
     
     @GetMapping("/perfil")
-    public String mostrarPerfil() {
-    	return "perfil.jsp";
+    public String mostrarPerfil(HttpSession sesion, Model model) {
+        Long idUsuario = (Long) sesion.getAttribute("idUsuario");
+        if (idUsuario == null) {
+            return "redirect:/";
+        }
+
+        Usuario usuarioActual = servicioUsuarios.selectPorId(idUsuario);
+        if (usuarioActual == null) {
+            return "redirect:/";
+        }
+
+        model.addAttribute("nombre", usuarioActual.getNombre());
+        model.addAttribute("apellidos", usuarioActual.getApellidos());
+        model.addAttribute("descripcion", usuarioActual.getDescripcion());
+
+        List<Publicaciones> publicaciones = servicioPublicaciones.obtenerPublicacionesPorUsuario(idUsuario);
+        model.addAttribute("publicaciones", publicaciones);
+
+        return "perfil.jsp";
     }
     
     @GetMapping("/home/detalle")

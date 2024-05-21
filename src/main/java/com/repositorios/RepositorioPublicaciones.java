@@ -11,6 +11,7 @@ import com.modelos.Publicaciones;
 public interface RepositorioPublicaciones extends JpaRepository<Publicaciones, Long> {
     List<Publicaciones> findTop5ByOrderByFechaCreacionDesc();
     List<Publicaciones> findAllByOrderByFechaCreacionDesc();
+    List<Publicaciones> findByUsuarioId(Long usuarioId);
 
 }
 
