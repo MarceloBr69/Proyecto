@@ -75,20 +75,33 @@ h2{
     text-align: center;
 }
 
+#detalle-publicacion{
+	display:flex;
+	justify-content: center;
+	gap: 3em;
+	margin: 0 auto;
+	height: 17em;
+	padding: 0 1em;
+}
+
 .detalle-publicacion{
     background-color: white;
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    margin: 0.5em 0;
+    width: 40%;
     color: #414950;
 }
 
 .fotoPublicacion{
 	display:flex;
 	background-color: green;
-	width: 40%;
+	width: 20em;
+	border-radius: 1em;
+}
+
+.nombreCreador{
+	color: #414950;
 }
 
 /* estilos para el pie de página */
@@ -107,24 +120,3 @@ footer{
     margin: 0 2em;
 }
 
-/* responsive adjustments */
-
-@media (max-width: 768px) {
-    .contenedorNav {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .container-detalle {
-        width: 95%;
-        padding: 1em;
-    }
-
-    .detalle-publicacion {
-        padding: 1em;
-    }
-
-    nav {
-        height: auto;
-    }
-}

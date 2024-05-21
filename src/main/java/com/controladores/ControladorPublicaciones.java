@@ -91,7 +91,7 @@ public class ControladorPublicaciones {
 
         if (!archivo.isEmpty()) {
             String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
-            String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
+            String rutaBase = "C://Users//liadi//Desktop//imagenes";
             String rutaCompleta = rutaBase + nombreImagen;
             
             Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);

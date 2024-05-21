@@ -130,6 +130,14 @@ input{
 	margin-bottom: 3em;
 }
 
+.publicacion{
+	display: flex;
+	flex-direction: column;
+	margin: 0 2em;
+	margin-bottom: 0.5em;
+	padding: 0.2em;
+}
+
 #actividad{
 	font-size: 30px;
 	color: #414950;
