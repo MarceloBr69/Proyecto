@@ -133,7 +133,9 @@ input{
 .publicacion{
 	display: flex;
 	flex-direction: column;
-	margin: 0.5em 2em;
+	margin: 0 2em;
+	margin-bottom: 0.5em;
+	padding: 0.2em;
 }
 
 #actividad{
