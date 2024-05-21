@@ -28,25 +28,19 @@
     </nav>
     <section class="container-detalle">
     
-        <h2><c:out value="${publicacion.titulo}"/></h2>
+        <h2>Detalles de la Publicación</h2>
         
         <div class="detalle-publicacion">
-            
-            <p><c:out value="${publicacion.descripcion}"/></p>
-            
+            <p><strong>Título:</strong> <c:out value="${publicacion.titulo}"/></p>
+            <p><strong>Descripción:</strong> <c:out value="${publicacion.descripcion}"/></p>
             <p><strong>Publicado por:</strong> <c:out value="${publicacion.usuario.nombre}"/></p>
             <p><strong>Fecha del evento:</strong> <c:out value="${fechaFormateada}"/></p>
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
-            
-        </div>
-        
-        <div class="fotoPublicacion">
-           </div>
-        	 <c:if test="${publicacion.archivo != null}">
+            <c:if test="${publicacion.subirFoto != null}">
                 <p><strong>Foto:</strong></p>
                 <img src="/fotos/${publicacion.subirFoto}" alt="Foto de la publicación"/>
             </c:if>
-        
+        </div>
     </section>
     <footer>
         <div class="derechos">

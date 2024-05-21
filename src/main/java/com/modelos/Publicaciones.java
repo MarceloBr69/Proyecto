@@ -3,6 +3,7 @@ package com.modelos;
 import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,6 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -33,8 +35,10 @@ public class Publicaciones {
 	@Size(min=2, message="Proporciona tu una descripción")
     private String descripcion;
 	
-    private String subirFoto;
+    @Transient
+    private MultipartFile archivo;
 	
+	@NotNull(message="Debes ingresar una fecha")
 	@DateTimeFormat(pattern="yyyy-MM-ss")
     private Date fechaEvento;
 	
@@ -60,18 +64,19 @@ public class Publicaciones {
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="imagen_id")
-	private Imagen imagen;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="imagen_id", nullable=true)
+    private Imagen imagen;
 
-	
+    // Getters y setters
     public Imagen getImagen() {
-		return imagen;
-	}
+        return imagen;
+    }
 
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
-	}
+    public void setImagen(Imagen imagen) {
+        this.imagen = imagen;
+    }
+
 
 	public Publicaciones(String titulo, String descripcion) {
 		this.titulo = titulo;
@@ -103,14 +108,6 @@ public class Publicaciones {
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-
-	public String getSubirFoto() {
-		return subirFoto;
-	}
-
-	public void setSubirFoto(String subirFoto) {
-		this.subirFoto = subirFoto;
 	}
 
 	public Date getFechaCreacion() {
@@ -145,5 +142,12 @@ public class Publicaciones {
 		this.fechaEvento = fechaEvento;
 	}
 
+	public MultipartFile getArchivo() {
+		return archivo;
+	}
+
+	public void setArchivo(MultipartFile archivo) {
+		this.archivo = archivo;
+	}
 
 }
