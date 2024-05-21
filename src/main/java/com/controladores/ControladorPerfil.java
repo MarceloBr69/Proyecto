@@ -78,7 +78,6 @@ public class ControladorPerfil {
         usuarioExistente.setDescripcion(usuario.getDescripcion());
 
         if (!fotoPerfilArchivo.isEmpty()) {
-            // Guardar la imagen en el servidor
             String nombreImagen = idUsuario + "_" + fotoPerfilArchivo.getOriginalFilename();
             String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
             String rutaCompleta = rutaBase + nombreImagen;
@@ -96,7 +95,6 @@ public class ControladorPerfil {
             }
         }
 
-        // Actualizar el usuario en la base de datos
         servicioUsuarios.actualizarUsuario(usuarioExistente);
         redirectAttributes.addFlashAttribute("success", "Perfil actualizado correctamente");
 

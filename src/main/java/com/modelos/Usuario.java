@@ -60,7 +60,8 @@ public class Usuario {
     
     private String descripcion;
     
-    @Transient
+    
+    //@Transient
     private String fotoPerfil;
 
     @Transient
