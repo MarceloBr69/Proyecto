@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.modelos.LoginUsuario;
 import com.modelos.Publicaciones;
@@ -18,6 +19,8 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class ControladorGeneral {
+	
+
 	
 	@Autowired
     private ServicioPublicaciones servicioPublicaciones;
@@ -75,5 +78,13 @@ public class ControladorGeneral {
     public String mostrarDetalle() {
     	return "detalleEvento.jsp";
     }
+    
+    @GetMapping("/verperfil/{usuario_id}")
+    public String mostrarPerfilDeOtroUsuario(@PathVariable("usuario_id") Long id, Model model) {
+    	Usuario usuarioId = this.servicioUsuarios.selectPorId(id);
+    	model.addAttribute("usuarioId", usuarioId);
+    	return "verperfil.jsp";
+    }
+    
 
 }

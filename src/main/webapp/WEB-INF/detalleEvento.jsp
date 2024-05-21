@@ -14,7 +14,7 @@
     <nav>
         <div class="contenedorNav">
             <div>
-                <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/>
+                <a href="/home"> <img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/> </a>
             </div>
             <div>
                 <ul>
@@ -38,7 +38,7 @@
             
             <br>
             
-            <p><strong>Publicado por:</strong> <a class= "nombreCreador" href="/verperfil"><c:out value="${publicacion.usuario.nombre}"/></a></p>
+            <p><strong>Publicado por:</strong> <a class= "nombreCreador" href="/verperfil/${publicacion.usuario.id}"><c:out value="${publicacion.usuario.nombre}"/></a></p>
             <p><strong>Fecha del evento:</strong> <c:out value="${fechaFormateada}"/></p>
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
             <c:if test="${publicacion.archivo != null}">

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.modelos.Publicaciones;
+
 import com.repositorios.RepositorioPublicaciones;
 
 
@@ -55,5 +56,7 @@ public class ServicioPublicaciones {
         return repositorioPublicaciones.findByUsuarioId(idUsuario);
     }
     
+   
+  
     
 }

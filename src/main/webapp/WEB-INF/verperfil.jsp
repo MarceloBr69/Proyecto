@@ -38,16 +38,14 @@
 	    </div>
 	    <div class="seccionTop">
 	        <div class="nombreCompleto">
-	            <h1><c:out value="${nombre}"/> <c:out value="${apellidos}"/> </h1>
+	            <h1><c:out value="${usuarioId.nombre}"/> <c:out value="${usuarioId.apellidos}"/> </h1> <!-- hacer que aparescan en un mismo reglon pls -->
 	        </div>
 	        
 	        <h3>Descripción</h3>
 	        
 	        <div id="descripcion">
-	            <c:out value="${descripcion}"/>
+	            <c:out value="${usuarioId.descripcion}"/>
 	        </div>
-	        <button id="editBtn" onclick="enableEditing()">Editar</button>
-	        <button id="saveBtn" style="display: none;" onclick="saveDescription()">Guardar</button>
 	    </div>
 </div>
 			
@@ -59,22 +57,22 @@
 		  <h2 id="actividad">Actividad Reciente</h2>
 		  
 		 <div class="publicaciones">
-		 	<p><c:out value="${descripcion}"/>
+		 	<p><c:out value="${usuarioId.descripcion}"/>
 			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
 			 asperiores enim, itaque veniam nulla accusantium minus 
 			 tenetur commodi ut!</p>
 			 
-			 	<p><c:out value="${descripcion}"/>
+			 	<p><c:out value="${usuarioId.descripcion}"/>
 			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
 			 asperiores enim, itaque veniam nulla accusantium minus 
 			 tenetur commodi ut!</p>
 			 
-			 	<p><c:out value="${descripcion}"/>
+			 	<p><c:out value="${usuarioId.descripcion}"/>
 			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
 			 asperiores enim, itaque veniam nulla accusantium minus 
 			 tenetur commodi ut!</p>
 			 
-			 	<p><c:out value="${descripcion}"/>
+			 	<p><c:out value="${usuarioId.descripcion}"/>
 			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur doloremque nisi ratione eum, magni hic similique neque impedit delectus
 			 asperiores enim, itaque veniam nulla accusantium minus 
 			 tenetur commodi ut!</p>
