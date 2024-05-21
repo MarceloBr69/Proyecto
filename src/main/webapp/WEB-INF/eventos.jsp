@@ -16,7 +16,7 @@
     <nav>
         <div class="contenedorNav">
             <div>
-                <a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="logo"/></a>
+                <a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="Fellow"/></a>
             </div>
             <div>
                 <ul>

@@ -18,7 +18,7 @@
 			<div class="contenedorNav">
 		
 			<div>
-				  <a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="nombre proyecto"/></a>
+				  <a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="Fellow"/></a>
 			</div>
 			
 	        <div>
@@ -36,7 +36,7 @@
 	<div class="top">
 	<div class="fotoPerfil">
 	    <c:if test="${usuario.imagenPerfil != null}">
-	        <img src="${usuario.imagenPerfil.rutaImagen}" alt="Foto de Perfil"/>
+	        <img src="${usuario.imagenPerfil.rutaImagen}"/>
 	    </c:if>
 	</div>
 	    <div class="seccionTop">
@@ -47,7 +47,7 @@
 	        <h3>Descripción</h3>
 	        
 	        <div id="descripcion">
-	            <p><c:out value="${descripcion}">Aquí va la descripción</c:out></p>
+	            <p><c:out value="${descripcion}"><!-- Aquí va la descripción --></c:out></p>
 	        </div>
 	        <button onclick="window.location.href='/editarPerfil'">Editar Perfil</button>
 	    </div>
