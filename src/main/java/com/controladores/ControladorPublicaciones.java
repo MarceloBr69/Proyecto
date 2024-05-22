@@ -1,12 +1,12 @@
 package com.controladores;
 
-import java.io.File;
+import java.io.File; 
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+import java.text.SimpleDateFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,12 +14,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 
 import com.modelos.CalculoFechas;
 import com.modelos.Imagen;
@@ -67,6 +69,12 @@ public class ControladorPublicaciones {
     protected void initBinder(WebDataBinder binder) {
         binder.setDisallowedFields("archivo");
     }
+    @InitBinder
+    public void initBinder1(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        dateFormat.setLenient(false);
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+    }
 
     
     @PostMapping("/enviarPublicacion")
@@ -91,7 +99,7 @@ public class ControladorPublicaciones {
 
         if (!archivo.isEmpty()) {
             String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
-            String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
+            String rutaBase = "/Users/jotac/Desktop/imagenes/";
             String rutaCompleta = rutaBase + nombreImagen;
             
             Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
@@ -111,6 +119,8 @@ public class ControladorPublicaciones {
     	return "redirect:/home";
     }
     
+
+    
     @GetMapping("/home/detalle/{id}")
     public String mostrarDetallePublicacion(@PathVariable("id") Long id, Model modelo) {
         Publicaciones publicacion = servicioPublicaciones.obtenerPublicacion(id);
@@ -124,5 +134,67 @@ public class ControladorPublicaciones {
         return "detalleEvento.jsp";
     }
     
+    @GetMapping("home/editar/{id}")
+    public String editarPublicacion(@ModelAttribute("publicacion") Publicaciones publicacionNuevo,
+    								@PathVariable("id") Long id, Model modelo, HttpSession sesion) {
+    	 Long idUsuario = (Long) sesion.getAttribute("idUsuario");
+         if (idUsuario == null) {
+             return "redirect:/";
+         }
+         Usuario usuarioActual = this.servicioUsuario.selectPorId(idUsuario);
+         if (usuarioActual == null) {
+             return "redirect:/";
+         }
+         Publicaciones publicacion = servicioPublicaciones.obtenerPublicacion(id);
+         modelo.addAttribute("publicacion", publicacion);
+          
+         return "editarEvento.jsp";
+    }
     
+   
+
+    
+   @PutMapping("/editarPublicacion/{id}")
+   public String procesaEditarPublicacion(@Valid @ModelAttribute("publicacion") Publicaciones publicacionNuevo,
+		   								BindingResult resultadoPublicacion,
+		   								@RequestParam MultipartFile archivo,
+		   								Model model,
+		   								@PathVariable("id") Long id,
+   										HttpSession sesion)  throws IOException {
+	   if(resultadoPublicacion.hasErrors()) {
+		   return "editarEvento/jsp";
+	   }
+	   
+	   Publicaciones publicacionExistente = this.servicioPublicaciones.obtenerPublicacion(id);
+	   
+	   if (!archivo.isEmpty()) {
+           String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
+           String rutaBase = "/Users/jotac/Desktop/imagenes/";
+           String rutaCompleta = rutaBase + nombreImagen;
+           
+           Imagen nuevaImagen = new Imagen(rutaCompleta, nombreImagen);
+           this.servicioImagenes.guardarImagen(nuevaImagen);
+           archivo.transferTo(new File(rutaCompleta));
+           publicacionNuevo.setImagen(nuevaImagen);
+           
+	   }else {
+	        
+	        publicacionNuevo.setImagen(publicacionExistente.getImagen());
+	    }
+	   
+	   Long idUsuario = (Long) sesion.getAttribute("idUsuario");
+	   Usuario usuarioActual = this.servicioUsuario.selectPorId(idUsuario);
+	   publicacionNuevo.setUsuario(usuarioActual);
+	   publicacionNuevo.setId(id);
+	   
+	   
+	   
+	   this.servicioPublicaciones.actualizarPublicacion(publicacionNuevo);
+	   return "redirect:/home";
+	   
+   }
 }
+   
+	   
+    
+

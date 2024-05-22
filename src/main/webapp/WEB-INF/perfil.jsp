@@ -49,7 +49,7 @@
 	        <div id="descripcion">
 	            <p><c:out value="${descripcion}"></c:out></p>
 	        </div>
-	        <button onclick="window.location.href='/editarPerfil'">Editar Perfil</button>
+	        <button onclick="window.location.href='/editarPerfil'">Editar evento</button>
 	    </div>
 	</div>
 				

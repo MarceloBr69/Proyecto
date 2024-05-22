@@ -48,6 +48,7 @@
 	        <div id="descripcion">
 	            <c:out value="${usuarioId.descripcion}"/>
 	        </div>
+	       
 	    </div>
 </div>
 			

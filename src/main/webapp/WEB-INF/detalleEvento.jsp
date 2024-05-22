@@ -42,6 +42,8 @@
             <p><strong>Fecha del evento:</strong> <c:out value="${fechaFormateada}"/></p>
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
             
+            <a href="/home/editar/${publicacion.id}"> editar evento</a>
+            
 
         </div>
         
