@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/css/publicar.css">
 <title>Editar Evento</title>
 </head>
 <body>
@@ -36,6 +37,6 @@
             <br>
             <form:button type="submit">Publicar</form:button>
         </form:form>
-
+	<script src="../js/publicar.js"></script>
 </body>
 </html>
