@@ -9,7 +9,7 @@
 		<meta charset="UTF-8">
 		<meta charset="ISO-8859-1">
 		<title>Perfil / Fellow</title>
-		<link rel="stylesheet" href="/css/verperfil.css">
+		<link rel="stylesheet" href="/css/perfil.css">
 	</head>
 	
 	<body>
@@ -34,7 +34,9 @@
 		
 	<div class="top">
 	    <div class="fotoPerfil">
-	        <!-- aqui va a ir la foto de perfil -->
+		    <c:if test="${usuario.imagenPerfil != null}">
+		        <img src="/imagenes/${usuario.imagenPerfil.nombre}" alt="Foto de Perfil"/>
+		    </c:if>
 	    </div>
 	    <div class="seccionTop">
 	        <div class="nombreCompleto">

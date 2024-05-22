@@ -47,6 +47,7 @@ public class ControladorPerfil {
         
         model.addAttribute("usuario", usuario);
         
+        
         return "editarPerfil.jsp";
     }
     

@@ -31,7 +31,7 @@
 <div class="top">
 	<div class="fotoPerfil">
 	    <c:if test="${usuario.imagenPerfil != null}">
-	        <img src="${usuario.imagenPerfil.rutaImagen}" alt="Foto de Perfil"/>
+	        <img src="/imagenes/${usuario.imagenPerfil.nombre}" alt="Foto de Perfil"/>
 	    </c:if>
 	</div>
     <div class="seccionTop">
