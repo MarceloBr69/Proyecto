@@ -14,7 +14,7 @@
     <nav>
         <div class="contenedorNav">
             <div>
-                <a href="/home"> <img id="nameLogo" src="fotos/fellow.png" alt="Fellow"/> </a>
+                <a href="/home"><img id="nameLogo" src="/fotos/fellow.png" alt="Fellow"/></a>
             </div>
             <div>
                 <ul>
@@ -34,21 +34,27 @@
         
         <div class="detalle-publicacion">
          
-            <p> <c:out value="${publicacion.descripcion}"/></p>
+            <p><c:out value="${publicacion.descripcion}"/></p>
             
             <br>
             
             <p><strong>Publicado por:</strong> <a class= "nombreCreador" href="/verperfil/${publicacion.usuario.id}"><c:out value="${publicacion.usuario.nombre}"/></a></p>
             <p><strong>Fecha del evento:</strong> <c:out value="${fechaFormateada}"/></p>
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
-            <c:if test="${publicacion.archivo != null}">
-                <p><strong>Foto:</strong></p>
-                <img src="/fotos/${publicacion.archivo}" alt="Foto de la publicación"/>
+            
+            <c:if test="${publicacion.usuario.id == idUsuario}">
+            	<a id="editarEvento" href="/home/editar/${publicacion.id}">Editar evento</a>
             </c:if>
+            
+            
+
         </div>
         
         <div class="fotoPublicacion">
-        	<p>imagen</p>
+        	
+        	<c:if test="${publicacion.imagen != null}">
+			    <img src="/imagenes/${publicacion.imagen.nombre}" alt="Imagen de ${publicacion.titulo}" class="fotoEvento"/>
+			</c:if>
         </div>
         
         </div>

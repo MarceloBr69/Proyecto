@@ -66,6 +66,8 @@ public class ControladorGeneral {
         model.addAttribute("nombre", usuarioActual.getNombre());
         model.addAttribute("apellidos", usuarioActual.getApellidos());
         model.addAttribute("descripcion", usuarioActual.getDescripcion());
+        model.addAttribute("usuario", usuarioActual);
+
 
         List<Publicaciones> publicaciones = servicioPublicaciones.obtenerPublicacionesPorUsuario(idUsuario);
         model.addAttribute("publicaciones", publicaciones);
@@ -83,7 +85,9 @@ public class ControladorGeneral {
     public String mostrarPerfilDeOtroUsuario(@PathVariable("usuario_id") Long id, Model model) {
     	Usuario usuarioId = this.servicioUsuarios.selectPorId(id);
     	model.addAttribute("usuarioId", usuarioId);
-    	
+    	model.addAttribute("usuario", usuarioId);
+       
+
     	List<Publicaciones> publicaciones = servicioPublicaciones.obtenerPublicacionesPorUsuario(id);
         model.addAttribute("publicaciones", publicaciones);
         

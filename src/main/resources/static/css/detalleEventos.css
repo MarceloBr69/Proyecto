@@ -27,16 +27,16 @@ nav{
 }
 
 #nameLogo{
-    display: flex;
-    height: 25px;
+	display: flex;
+	height: 25px;
 }
 
-.contenedorNav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    gap: 60%;
+.contenedorNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;
+	gap: 60%;
     padding: 0.2em;
     margin: 0 2em;
     width: 100%;
@@ -49,7 +49,7 @@ ul{
     list-style: none;
 }
 
-a{
+nav a{
     text-decoration: none;
     color: white;
 }
@@ -120,3 +120,17 @@ footer{
     margin: 0 2em;
 }
 
+
+.fotoEvento img {
+	height:100em;
+	background-image: url(../fotos/fotoperfil.png);
+	background-size: cover;
+    width: 20em;
+    height: 20em;
+    object-fit: cover; /* Esto asegurará que la imagen se ajuste dentro del contenedor */
+    border-radius: 50%; /* Esto asegurará que la imagen también sea redonda */
+}
+
+#editarEvento{
+	color: grey;
+}

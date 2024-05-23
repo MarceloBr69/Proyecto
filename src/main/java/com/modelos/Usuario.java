@@ -52,10 +52,10 @@ public class Usuario {
     private Long municipalidadId;
     
     @Column(updatable=false)
-    @DateTimeFormat(pattern="yyyy-MM-ss")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date fechaCreacion;
     
-    @DateTimeFormat(pattern="yyyy-MM-ss")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date fechaActualizacion;
     
     private String descripcion;
