@@ -6,11 +6,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/css/publicar.css">
+<link rel="stylesheet" href="/css/editarEvento.css">
 <title>Editar Evento</title>
 </head>
 <body>
 
+<nav>
+		<div class="contenedorNav">
+			<div>
+				<!-- Logo de la empresa -->
+				<a href="/home"><img id="nameLogo" src="fotos/fellow.png" alt="Fellow"/></a>
+			</div>
+
+			<div>
+				<ul>
+					<!-- Direcciones-->
+					<li><a href="/home">Inicio</a></li>
+					<li><a href="/eventos">Eventos</a></li>
+					<li><a href="/perfil">Perfil</a></li>
+					<li><a href="/logout">Logout</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+	
+	<div class="container">
+	
+	    <div class="container">
+	    
  <form:form modelAttribute="publicacion" action="/editarPublicacion/${publicacion.id}"
             method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT">
@@ -37,6 +61,12 @@
             <br>
             <form:button type="submit">Publicar</form:button>
         </form:form>
+        
+          </div>
+		
+		<div id="preview" class="styleImage"></div>
+		<!-- Este sera el div donde ira la imagen -->
+	</div>
 	<script src="../js/publicar.js"></script>
 </body>
 </html>

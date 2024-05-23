@@ -6,6 +6,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{ /*Body*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:white; 
+    background-image: url(../fotos/background2.png);
+    background-size: cover;
+}
+
 nav {
 	display: flex;
 	flex-direction: row;
@@ -50,20 +59,20 @@ a{
 
 h1{
 	display: flex;
-	margin-top: 6%;
-	margin-left: 20%;
+	margin: 5% auto 0%;
 	font-size: 2.5em;
-	color:  #414950;
+	color:  white;
 }
+
 
 .contenedorPublicaciones{
 	display: flex;
 	flex-direction: column;
-	margin: 2% auto;
+	margin: 1% auto 0;
 	background-color:  #eff5e7;
 	padding: 2% 4%;
 	width: 70%;
-	height: 20em;
+	height: 24em;
 	border-radius: 3em;
 	overflow: scroll;
 }
@@ -76,7 +85,7 @@ h1{
 
 .tituloPublicacion{
 	color:#414950;
-	font-size: 20px;
+	font-size: 25px;
 	margin-bottom: 0.5em;
 	font-style: italic;
 }
@@ -85,14 +94,14 @@ h1{
 /*footer*/
 
 footer{
-	margin-top: 2em;
+	margin-top: 0;
 }
 
 .derechos{
 	display: flex;
 	justify-content: center;
 	padding: 2.5em;
-	color:  #414950;
+	color:  white;
 }
 
 
