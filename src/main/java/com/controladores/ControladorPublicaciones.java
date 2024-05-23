@@ -98,7 +98,12 @@ public class ControladorPublicaciones {
         }
 
         if (!archivo.isEmpty()) {
-            String nombreImagen = new Date().toString() + "_" + archivo.getOriginalFilename();
+        	
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+            String timestamp = dateFormat.format(new Date());
+            String nombreImagen = timestamp + "_" + archivo.getOriginalFilename();
+        	
+        	
             String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
             String rutaCompleta = rutaBase + nombreImagen;
             
