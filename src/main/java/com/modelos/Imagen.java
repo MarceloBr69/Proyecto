@@ -26,10 +26,10 @@ public class Imagen {
 	private String nombre;
 	
 	@Column(updatable=false)
-	@DateTimeFormat(pattern="yyyy-MM-ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fechaCreacion;
 	
-	@DateTimeFormat(pattern="yyyy-MM-ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fechaActualizacion;
 	
 	public Imagen() {}

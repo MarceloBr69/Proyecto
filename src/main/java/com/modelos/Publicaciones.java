@@ -39,15 +39,15 @@ public class Publicaciones {
     private MultipartFile archivo;
 	
 	@NotNull(message="Debes ingresar una fecha")
-	@DateTimeFormat(pattern="yyyy-MM-ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
     private Date fechaEvento;
 	
 
 	@Column(updatable=false)
-	@DateTimeFormat(pattern="yyyy-MM-ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fechaCreacion;
 	
-	@DateTimeFormat(pattern="yyyy-MM-ss")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fechaActualizacion;
 	
 	@PrePersist

@@ -34,7 +34,7 @@
         
         <div class="detalle-publicacion">
          
-            <p> <c:out value="${publicacion.descripcion}"/></p>
+            <p><c:out value="${publicacion.descripcion}"/></p>
             
             <br>
             
@@ -43,7 +43,7 @@
             <p><strong>Tiempo transcurrido:</strong> <c:out value="${tiempoTranscurrido}"/></p>
             
             <c:if test="${publicacion.usuario.id == idUsuario}">
-            	<a href="/home/editar/${publicacion.id}"> editar evento</a>
+            	<a id="editarEvento" href="/home/editar/${publicacion.id}">Editar evento</a>
             </c:if>
             
             

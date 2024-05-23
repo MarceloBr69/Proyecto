@@ -49,7 +49,7 @@ ul{
     list-style: none;
 }
 
-a{
+nav a{
     text-decoration: none;
     color: white;
 }
@@ -129,4 +129,8 @@ footer{
     height: 20em;
     object-fit: cover; /* Esto asegurará que la imagen se ajuste dentro del contenedor */
     border-radius: 50%; /* Esto asegurará que la imagen también sea redonda */
+}
+
+#editarEvento{
+	color: grey;
 }

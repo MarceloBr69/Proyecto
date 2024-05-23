@@ -80,7 +80,7 @@ public class ControladorPerfil {
 
         if (!fotoPerfilArchivo.isEmpty()) {
             String nombreImagen = idUsuario + "_" + fotoPerfilArchivo.getOriginalFilename();
-            String rutaBase = "/Users/jotac/Desktop/imagenes/";
+            String rutaBase = "/Users/rociobustos/Desktop/imagenes/";
             String rutaCompleta = rutaBase + nombreImagen;
 
             try {
