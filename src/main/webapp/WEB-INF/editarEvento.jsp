@@ -54,7 +54,7 @@
             <form:label path="fechaEvento"> Fecha del evento: </form:label>
             <form:input path="fechaEvento" type="date" />
             <form:errors path="fechaEvento" cssClass="error" />
-            <br><img src="/imagenes/${publicacion.imagen.nombre}" alt="Imagen de ${publicacion.titulo}" class="fotoEvento"/>
+            
             <form:label path="archivo" >Imagen:</form:label >
             <input type="file" name="archivo" id="archivo">
             <form:errors path="archivo" cssClass="error"/> 

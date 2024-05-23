@@ -94,9 +94,19 @@ h2{
     color: #414950;
 }
 
+.fotoPublicacion{
+	display:flex;
+	border-radius: 1em;
+	height: 100%;
 
-.fotoEvento{
-	width:20em;
+}
+
+.fotoPublicacion img {
+	height:100%;
+	background-size: cover;
+    width: 30em;
+    border-radius: 1em;
+    object-fit: cover; /* Esto asegurará que la imagen se ajuste dentro del contenedor */
 }
 
 
